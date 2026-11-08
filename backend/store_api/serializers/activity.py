@@ -6,7 +6,7 @@ from ..constants import PUBLIC_ACTIVITY_TYPES
 
 class UserActivitySerializer(serializers.ModelSerializer):
     user_name = serializers.CharField(source='user.username', read_only=True, allow_null=True)
-    
+
     class Meta:
         model = UserActivity
         fields = '__all__'

@@ -6,7 +6,7 @@ from ..constants import ORDER_TRANSITIONS, CHECKOUT_MAX_LINES, CHECKOUT_MAX_QUAN
 class OrderItemSerializer(serializers.ModelSerializer):
     product_name = serializers.CharField(source='product.name', read_only=True)
     total_price = serializers.ReadOnlyField()
-    
+
     class Meta:
         model = OrderItem
         fields = '__all__'
@@ -18,7 +18,7 @@ class OrderSerializer(serializers.ModelSerializer):
     def get_allowed_statuses(self, obj):
         return [obj.status, *sorted(ORDER_TRANSITIONS[obj.status])]
     user_name = serializers.CharField(source='user.username', read_only=True)
-    
+
     class Meta:
         model = Order
         fields = '__all__'

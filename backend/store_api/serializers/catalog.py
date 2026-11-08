@@ -17,7 +17,7 @@ class ProductSerializer(serializers.ModelSerializer):
     stock_status = serializers.ReadOnlyField()
     is_in_stock = serializers.ReadOnlyField()
     category_name = serializers.CharField(source='category.name', read_only=True)
-    
+
     class Meta:
         model = Product
         fields = '__all__'
@@ -32,15 +32,14 @@ class ProductSerializer(serializers.ModelSerializer):
 class CategorySerializer(serializers.ModelSerializer):
     parent_name = serializers.CharField(source='parent.name', read_only=True, allow_null=True)
     subcategories = serializers.SerializerMethodField()
-    
+
     class Meta:
         model = Category
         fields = '__all__'
-    
+
     def get_subcategories(self, obj):
         # Only return subcategories for parent categories (where parent is null)
         if obj.parent is None:
             subs = obj.subcategories.all()
             return [{'id': sub.id, 'name': sub.name, 'slug': sub.slug} for sub in subs]
         return []
-
