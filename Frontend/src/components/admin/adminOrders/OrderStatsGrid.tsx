@@ -1,5 +1,5 @@
 import OrderStatusCard from './OrderStatusCard';
-import type { OrderStatsGridProps } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrderStatsGridProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrderStatsGrid({ stats }: OrderStatsGridProps) {
   const cards = [

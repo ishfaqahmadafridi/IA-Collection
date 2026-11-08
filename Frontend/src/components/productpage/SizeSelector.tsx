@@ -1,5 +1,5 @@
-import { useProductStore } from '../zustand/product/productStore';
-import type { SizeSelectorProps } from '../interfaces/productpage/productpageInterface';
+import { useProductStore } from '../../stores/product/productStore';
+import type { SizeSelectorProps } from '../../types/components/productpage/productpageInterface';
 
 export default function SizeSelector({ sizes }: SizeSelectorProps) {
     const setSelectedSize = useProductStore((state) => state.setSelectedSize);

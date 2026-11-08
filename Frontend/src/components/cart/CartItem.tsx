@@ -3,7 +3,7 @@ import CartItemImage from './CartItemImage';
 import CartItemDetails from './CartItemDetails';
 import CartItemPrice from './CartItemPrice';
 import CartItemRemove from './CartItemRemove';
-import { CartItemProps } from '../interfaces/cart/cartInterface';
+import { CartItemProps } from '../../types/components/cart/cartInterface';
 
 export default function CartItem({ item }: CartItemProps) {
     return (

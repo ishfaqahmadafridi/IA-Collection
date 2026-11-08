@@ -1,4 +1,4 @@
-import type { UserActivityBarChartProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { UserActivityBarChartProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function UserActivityBarChart({ loginData }: UserActivityBarChartProps) {
   const maxLogins = Math.max(...loginData.map((d) => d.count), 1);

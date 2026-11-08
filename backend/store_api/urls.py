@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import CategoryViewSet, ProductViewSet
 from .auth_views import (
     RegisterView, CustomTokenObtainPairView,
-    upload_profile_image, change_password, get_profile
+    upload_profile_image, change_password, get_profile, update_profile
 )
 from rest_framework_simplejwt.views import TokenRefreshView
 
@@ -13,6 +13,8 @@ from .admin_views import (
     dashboard_stats, sales_analytics, user_analytics,
     top_selling_products, log_user_activity, subscribe_newsletter
 )
+
+from .customer_views import CustomerOrderCreate, CustomerOrderDetail
 
 # Single router for all viewsets
 router = DefaultRouter()
@@ -28,6 +30,9 @@ urlpatterns = [
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
     # Profile endpoints
+    path('orders/', CustomerOrderCreate.as_view(), name='customer-order-create'),
+    path('orders/<str:order_number>/', CustomerOrderDetail.as_view(), name='customer-order-detail'),
+    path('profile/update/', update_profile, name='profile-update'),
     path('profile/', get_profile, name='profile'),
     path('profile/upload-image/', upload_profile_image, name='upload-profile-image'),
     path('profile/change-password/', change_password, name='change-password'),

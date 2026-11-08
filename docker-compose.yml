@@ -9,13 +9,8 @@ services:
     container_name: ecommerce-frontend
     ports:
       - "5173:5173"
-    environment:
-      - VITE_API_URL=http://backend:8000
     depends_on:
       - backend
-    volumes:
-      - ./Frontend:/app
-      - /app/node_modules
     networks:
       - ecommerce-network
     restart: unless-stopped

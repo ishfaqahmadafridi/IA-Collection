@@ -1,4 +1,4 @@
-import type { ProfileSubmitButtonProps } from '../interfaces/profile/profileInterface';
+import type { ProfileSubmitButtonProps } from '../../types/profile';
 
 export default function ChangePasswordSubmitButton({ isLoading }: ProfileSubmitButtonProps) {
     return (

@@ -1,9 +1,9 @@
-import { useCartStore } from '../zustand/cart/cartStore';
+import { useCartStore } from '../../stores/cart/cartStore';
 import FragranceProductTitle from './FragranceProductTitle';
 import FragranceProductPrice from './FragranceProductPrice';
 import FragranceStockIndicator from './FragranceStockIndicator';
 import FragranceAddToCartBtn from './FragranceAddToCartBtn';
-import type { FragranceProductInfoProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductInfoProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductInfo({ product }: FragranceProductInfoProps) {
     const addToCart = useCartStore((state) => state.addToCart);

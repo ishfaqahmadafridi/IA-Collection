@@ -77,6 +77,6 @@ class ProductViewSet(viewsets.ReadOnlyModelViewSet):
                 else:
                     queryset = queryset.filter(category=cat)
             except Category.DoesNotExist:
-                pass
+                return queryset.none()
         
         return queryset

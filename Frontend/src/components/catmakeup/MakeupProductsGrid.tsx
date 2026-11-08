@@ -1,5 +1,5 @@
 import MakeupProductCard from './MakeupProductCard';
-import type { MakeupProductsGridProps } from '../interfaces/catmakeup/catmakeupInterface';
+import type { MakeupProductsGridProps } from '../../types/components/catmakeup/catmakeupInterface';
 
 export default function MakeupProductsGrid({ products }: MakeupProductsGridProps) {
     return (

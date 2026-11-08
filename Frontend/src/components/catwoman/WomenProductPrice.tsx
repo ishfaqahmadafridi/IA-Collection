@@ -1,5 +1,5 @@
 import { formatPrice } from '../../lib/utils';
-import type { WomenProductPriceProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductPriceProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductPrice({ price, originalPrice }: WomenProductPriceProps) {
     return (

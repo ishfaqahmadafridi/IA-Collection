@@ -1,4 +1,4 @@
-import type { CatBoyGProduct } from '../interfaces/catboyG/catBoyGInterface';
+import type { CatBoyGProduct } from '../../types/components/catboyG/catBoyGInterface';
 import ProductCard from './ProductCard';
 
 type ProductsGridProps = {

@@ -2,7 +2,7 @@ import React from 'react';
 
 import CartList from './CartList';
 import CartSummary from './CartSummary';
-import { useCartStore } from '../zustand/cart/cartStore';
+import { useCartStore } from '../../stores/cart/cartStore';
 
 export default function CartLayout() {
     const items = useCartStore((state) => state.items);

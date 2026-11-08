@@ -1,4 +1,4 @@
-import type { StatCardProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { StatCardProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function StatCard({ title, value, subtitle, icon: Icon, color }: StatCardProps) {
   return (

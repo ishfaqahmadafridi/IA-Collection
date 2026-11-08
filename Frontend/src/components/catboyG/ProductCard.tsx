@@ -1,4 +1,4 @@
-import type { ProductCardProps } from '../interfaces/catboyG/catBoyGInterface';
+import type { ProductCardProps } from '../../types/components/catboyG/catBoyGInterface';
 import ProductImage from './ProductImage';
 import ProductInfo from './ProductInfo';
 

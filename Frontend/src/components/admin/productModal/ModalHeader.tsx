@@ -1,5 +1,5 @@
 import { IoClose } from 'react-icons/io5';
-import type { ModalHeaderProps } from '../../interfaces/admin/productModal/productModalInterface';
+import type { ModalHeaderProps } from '../../../types/components/admin/productModal/productModalInterface';
 
 export default function ModalHeader({ title, onClose }: ModalHeaderProps) {
   return (

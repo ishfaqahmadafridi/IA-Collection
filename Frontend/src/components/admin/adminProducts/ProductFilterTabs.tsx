@@ -1,17 +1,11 @@
-import type { ProductFilterTabsProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import { INVENTORY_FILTERS } from '../../../constants/inventory';
+import type { ProductFilterTabsProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function ProductFilterTabs({ activeFilter, onFilterChange }: ProductFilterTabsProps) {
-  const filters = [
-    { value: 'all', label: 'All Products' },
-    { value: 'in_stock', label: 'In Stock' },
-    { value: 'low_stock', label: 'Low Stock' },
-    { value: 'out_of_stock', label: 'Out of Stock' },
-  ];
-
   return (
     <div className="bg-white rounded-xl shadow-sm p-4">
       <div className="flex flex-wrap gap-2">
-        {filters.map((filter) => (
+        {INVENTORY_FILTERS.map((filter) => (
           <button
             key={filter.value}
             onClick={() => onFilterChange(filter.value)}

@@ -1,9 +1,9 @@
-import { useCartStore } from '../zustand/cart/cartStore';
+import { useCartStore } from '../../stores/cart/cartStore';
 import MenProductTitle from './MenProductTitle';
 import MenProductPrice from './MenProductPrice';
 import MenStockIndicator from './MenStockIndicator';
 import MenAddToCartBtn from './MenAddToCartBtn';
-import type { MenProductInfoProps } from '../interfaces/catman/catmanInterface';
+import type { MenProductInfoProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenProductInfo({ product }: MenProductInfoProps) {
     const addToCart = useCartStore((state) => state.addToCart);
@@ -24,11 +24,11 @@ export default function MenProductInfo({ product }: MenProductInfoProps) {
             <MenStockIndicator />
             <MenAddToCartBtn onClick={(e) => {
                 e.stopPropagation();
-                addToCart({ 
-                    ...product, 
+                addToCart({
+                    ...product,
                     id: getNumericId(product.id),
-                    quantity: 1, 
-                    size: 'M' 
+                    quantity: 1,
+                    size: 'M'
                 });
             }} />
         </div>

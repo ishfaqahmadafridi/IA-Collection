@@ -1,6 +1,6 @@
 import StatCard from './StatCard';
 import { IoCashOutline, IoCartOutline, IoCubeOutline, IoPeopleOutline, IoMailOutline, IoAlertCircleOutline } from 'react-icons/io5';
-import type { StatsGridProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { StatsGridProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function StatsGrid({ stats }: StatsGridProps) {
   const statCards = [

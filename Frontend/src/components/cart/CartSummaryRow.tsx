@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatPrice } from  '../../lib/utils';
-import { CartSummaryRowProps } from '../interfaces/cart/cartInterface';
+import { CartSummaryRowProps } from '../../types/components/cart/cartInterface';
 
 export default function CartSummaryRow({ label, value, isBold, isLarge, isItalic, border = true }: CartSummaryRowProps) {
     const labelClasses = isBold ? "font-bold text-foreground" : "text-muted-foreground";

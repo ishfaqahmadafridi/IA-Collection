@@ -1,5 +1,5 @@
 
-import { CategoryCardProps } from "../interfaces/BoysGirlsCategory/CategoryCard";
+import { CategoryCardProps } from "../../types/components/BoysGirlsCategory/CategoryCard";
 
 export default function CategoryCard({ name, image, link }: CategoryCardProps) {
   return (

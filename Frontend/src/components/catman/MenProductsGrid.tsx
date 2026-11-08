@@ -1,5 +1,5 @@
 import MenProductCard from './MenProductCard';
-import type { MenProductsGridProps } from '../interfaces/catman/catmanInterface';
+import type { MenProductsGridProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenProductsGrid({ products }: MenProductsGridProps) {
     return (

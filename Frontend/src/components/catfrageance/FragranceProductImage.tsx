@@ -1,4 +1,4 @@
-import type { FragranceProductImageProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductImageProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductImage({ src, name, discount }: FragranceProductImageProps) {
     return (

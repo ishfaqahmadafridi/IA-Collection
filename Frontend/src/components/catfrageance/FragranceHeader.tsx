@@ -1,4 +1,4 @@
-import type { FragranceHeaderProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceHeaderProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceHeader({ name, heroImage }: FragranceHeaderProps) {
     return (

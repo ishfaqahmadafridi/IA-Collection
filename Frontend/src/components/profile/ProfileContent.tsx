@@ -1,4 +1,4 @@
-import type { ProfileContentProps } from '../interfaces/profile/profileInterface';
+import type { ProfileContentProps } from '../../types/profile';
 import UpdateProfileForm from './UpdateProfileForm';
 import ChangePasswordForm from './ChangePasswordForm';
 

@@ -1,4 +1,4 @@
-import type { ProductDetailsProps } from '../interfaces/productpage/productpageInterface';
+import type { ProductDetailsProps } from '../../types/components/productpage/productpageInterface';
 
 export default function ProductDetails({ details }: ProductDetailsProps) {
     if (!details) return null;

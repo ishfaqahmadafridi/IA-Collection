@@ -1,6 +1,6 @@
 import { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useAuthStore } from './components/zustand/auth/authStore';
+import { useAuthStore } from './stores/auth/authStore';
 import Layout from './components/layout/Layout';
 import ScrollToTop from './components/layout/ScrollToTop';
 import LoadingScreen from './components/layout/LoadingScreen';
@@ -32,11 +32,7 @@ function App() {
 
     // Load user profile on app init if token exists
     useEffect(() => {
-        const token = localStorage.getItem('access_token');
-        const isValidToken = !!token && token !== 'undefined' && token !== 'null';
-        if (isValidToken) {
-            fetchUserProfile().catch(console.error);
-        }
+        fetchUserProfile().catch(console.error);
     }, [fetchUserProfile]);
 
     return (
@@ -46,7 +42,7 @@ function App() {
                 <Routes>
                     {/* Admin route without Layout */}
                     <Route path="/admin" element={<AdminPanel />} />
-                    
+
                     {/* Routes with Layout (Header/Footer) */}
                     <Route element={<Layout />}>
                         <Route path="/" element={<LandingPage />} />

@@ -1,4 +1,4 @@
-import type { MenAddToCartBtnProps } from '../interfaces/catman/catmanInterface';
+import type { MenAddToCartBtnProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenAddToCartBtn({ onClick }: MenAddToCartBtnProps) {
     return (

@@ -2,7 +2,7 @@ import AdminDashboard from '../../admin/adminDashboard/index';
 import AdminProducts from '../adminProducts/index';
 import AdminOrders from '../adminOrders/index';
 import AdminAnalytics from '../adminAnalytics/index';
-import type { AdminContentProps } from '../../interfaces/admin/adminPanel/adminPanelInterface';
+import type { AdminContentProps } from '../../../types/components/admin/adminPanel/adminPanelInterface';
 
 export default function AdminContent({ currentView }: AdminContentProps) {
   const renderContent = () => {

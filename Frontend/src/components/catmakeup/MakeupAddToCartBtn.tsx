@@ -1,4 +1,4 @@
-import type { MakeupAddToCartBtnProps } from '../interfaces/catmakeup/catmakeupInterface';
+import type { MakeupAddToCartBtnProps } from '../../types/components/catmakeup/catmakeupInterface';
 
 export default function MakeupAddToCartBtn({ onClick }: MakeupAddToCartBtnProps) {
     return (

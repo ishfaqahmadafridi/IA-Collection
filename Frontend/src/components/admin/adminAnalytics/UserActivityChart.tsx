@@ -1,6 +1,6 @@
 import UserActivityBarChart from './UserActivityBarChart';
 import ActivityBreakdown from './ActivityBreakdown';
-import type { UserActivityChartProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { UserActivityChartProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function UserActivityChart({ data }: UserActivityChartProps) {
   return (

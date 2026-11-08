@@ -1,4 +1,4 @@
-import type { MenHeaderProps } from '../interfaces/catman/catmanInterface';
+import type { MenHeaderProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenHeader({ name, heroImage }: MenHeaderProps) {
     return (

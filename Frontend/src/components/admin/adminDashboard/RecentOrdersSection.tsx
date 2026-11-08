@@ -1,5 +1,5 @@
 import RecentOrdersTable from './RecentOrdersTable';
-import type { RecentOrdersSectionProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { RecentOrdersSectionProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function RecentOrdersSection({ recent_Orders }: RecentOrdersSectionProps) {
   return (

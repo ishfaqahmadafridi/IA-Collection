@@ -1,5 +1,5 @@
 import QuickStatCard from './QuickStatCard';
-import type { QuickStatsRowProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { QuickStatsRowProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function QuickStatsRow({ stats }: QuickStatsRowProps) {
   const quickStats = [

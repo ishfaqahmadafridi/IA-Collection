@@ -1,5 +1,5 @@
 import FragranceProductCard from './FragranceProductCard';
-import type { FragranceProductsGridProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductsGridProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductsGrid({ products }: FragranceProductsGridProps) {
     return (

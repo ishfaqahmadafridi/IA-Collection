@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 import SkincareProductImage from './SkincareProductImage';
 import SkincareProductInfo from './SkincareProductInfo';
-import type { SkincareProductCardProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductCardProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductCard({ product, showDiscount }: SkincareProductCardProps) {
     const setSelectedProduct = useUiStore((state) => state.setSelectedProduct);

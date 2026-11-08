@@ -1,21 +1,20 @@
 import MenHeader from './MenHeader';
 import MenProductsGrid from './MenProductsGrid';
-import type { MenSectionProps } from '../interfaces/catman/catmanInterface';
+import type { MenSectionProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenSection({ category, backendProducts = [] }: MenSectionProps) {
-    // Convert backend products to the same format as static products
-    const formattedBackendProducts = backendProducts.map((product: any) => ({
-        id: `backend-${product.id}`,
+    // Format API fields for the product cards.
+    const formattedBackendProducts = backendProducts.map((product) => ({
+        id: product.id,
         name: product.name,
-        price: parseFloat(product.price),
-        originalPrice: product.original_price ? parseFloat(product.original_price) : undefined,
+        price: Number(product.price),
+        originalPrice: product.original_price ? Number(product.original_price) : undefined,
         discount: product.discount ? `${product.discount}% OFF` : undefined,
         image: product.image || 'https://placehold.co/400x600',
         isBackend: true,
     }));
 
-    // Combine static and backend products (backend products first to show new additions)
-    const allProducts = [...formattedBackendProducts, ...category.products];
+    const allProducts = formattedBackendProducts;
 
     return (
         <section className="space-y-8">

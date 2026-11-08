@@ -1,4 +1,4 @@
-import type { MenProductTitleProps } from '../interfaces/catman/catmanInterface';
+import type { MenProductTitleProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenProductTitle({ name }: MenProductTitleProps) {
     return (

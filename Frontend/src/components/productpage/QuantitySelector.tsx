@@ -1,4 +1,4 @@
-import { useProductStore } from '../zustand/product/productStore';
+import { useProductStore } from '../../stores/product/productStore';
 
 export default function QuantitySelector() {
     const setQuantity = useProductStore((state) => state.setQuantity);

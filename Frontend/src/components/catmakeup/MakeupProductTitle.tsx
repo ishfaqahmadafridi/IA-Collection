@@ -1,4 +1,4 @@
-import type { MakeupProductTitleProps } from '../interfaces/catmakeup/catmakeupInterface';
+import type { MakeupProductTitleProps } from '../../types/components/catmakeup/catmakeupInterface';
 
 export default function MakeupProductTitle({ name }: MakeupProductTitleProps) {
     return (

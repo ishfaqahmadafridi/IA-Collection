@@ -9,9 +9,9 @@ interface ScrollRevealProps {
   once?: boolean;
 }
 
-export default function ScrollReveal({ 
-  children, 
-  className = '', 
+export default function ScrollReveal({
+  children,
+  className = '',
   animation = 'fade-up',
   delay = 0,
   threshold = 0.1,
@@ -35,15 +35,9 @@ export default function ScrollReveal({
       { threshold }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
+    const element = ref.current;
+    if (element) observer.observe(element);
+    return () => { observer.disconnect(); };
   }, [threshold, once]);
 
   const getAnimationClass = () => {

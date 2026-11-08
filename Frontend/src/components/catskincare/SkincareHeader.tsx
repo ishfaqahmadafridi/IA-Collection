@@ -1,4 +1,4 @@
-import type { SkincareHeaderProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareHeaderProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareHeader({ name, heroImage }: SkincareHeaderProps) {
     return (

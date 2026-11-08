@@ -1,4 +1,4 @@
-import type { OrderStatusCardProps } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrderStatusCardProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrderStatusCard({ label, value, color }: OrderStatusCardProps) {
   return (

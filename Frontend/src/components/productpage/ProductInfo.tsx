@@ -1,4 +1,4 @@
-import type { ProductInfoProps } from '../interfaces/productpage/productpageInterface';
+import type { ProductInfoProps } from '../../types/components/productpage/productpageInterface';
 import SizeSelector from './SizeSelector';
 import QuantitySelector from './QuantitySelector';
 import AddToCartBtn from './AddToCartBtn';

@@ -1,13 +1,15 @@
+import Modal from '../../layout/Modal';
 import { IoClose } from 'react-icons/io5';
-import type { OrderDetailsModalProps } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrderDetailsModalProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrderDetailsModal({ order, onClose }: OrderDetailsModalProps) {
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-xl shadow-xl w-full max-w-2xl max-h-[80vh] overflow-y-auto m-4">
+    <Modal title={`Order ${order.order_number}`} onClose={onClose}>
+      <div className="bg-white rounded-xl w-full">
         <div className="flex items-center justify-between p-6 border-b">
           <h3 className="text-xl font-bold text-gray-900">Order #{order.order_number}</h3>
           <button
+            aria-label="Close order details"
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 transition-colors"
           >
@@ -67,6 +69,6 @@ export default function OrderDetailsModal({ order, onClose }: OrderDetailsModalP
           </div>
         </div>
       </div>
-    </div>
+    </Modal>
   );
 }

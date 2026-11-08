@@ -1,21 +1,17 @@
-import trackImage from '../../assets/images/track.jpeg';
-
+import { Link } from 'react-router-dom';
+import { useOrderTracking } from '../../hooks/orders/useOrderTracking';
+import OrderTrackingDetails from './OrderTrackingDetails';
 export default function Tracking() {
-  return (
-    <div className="min-h-screen pt-20" style={{ backgroundImage: `url(${trackImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-      <div className="min-h-[80vh] flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
-        <div className="max-w-xl w-full bg-card/95 backdrop-blur-xl p-12 rounded-3xl shadow-2xl space-y-8 border border-border">
-          <div className="text-center space-y-2">
-            <h2 className="text-4xl font-black uppercase tracking-tighter">Track Order</h2>
-            <p className="text-sm text-gray-500 font-bold uppercase tracking-widest">Real-time Delivery Status</p>
-          </div>
-          <div className="space-y-4">
-            <input type="text" placeholder="Order ID (e.g. AG-12345)" className="w-full px-6 py-5 bg-gray-100/50 border-2 border-transparent focus:border-rose-600 rounded-2xl outline-none transition-all font-black text-rose-600 placeholder:text-gray-400" />
-            <button className="w-full py-5 bg-rose-600 text-white text-xs font-black uppercase tracking-[0.3em] rounded-2xl hover:bg-black transition-all transform active:scale-95">Initiate Search</button>
-          </div>
-          <p className="text-center text-[10px] text-gray-400 font-black uppercase tracking-widest">Check your email for tracking credentials</p>
-        </div>
-      </div>
-    </div>
-  );
+  const { number, setNumber, order, loading, error, authenticated, initialized, submit } = useOrderTracking();
+  return <main className="max-w-2xl mx-auto px-4 pt-32 pb-12 space-y-6"><h1 className="text-3xl">Track your order</h1>
+    {!initialized ? <p role="status">Checking session…</p> : !authenticated ? <Link to="/signin" className="underline">Sign in to view your orders</Link> : <>
+      <form onSubmit={submit} className="space-y-4">
+        <label htmlFor="order-number" className="block">Order number</label>
+        <input id="order-number" required value={number} onChange={event => setNumber(event.target.value)} className="w-full border rounded p-3 bg-background" />
+        <button disabled={loading} className="bg-primary text-primary-foreground px-6 py-3 rounded disabled:opacity-50">{loading ? 'Looking up order…' : 'View status'}</button>
+      </form>
+      {error && <p role="alert">{error}</p>}
+      {order && <OrderTrackingDetails order={order} />}
+    </>}
+  </main>;
 }

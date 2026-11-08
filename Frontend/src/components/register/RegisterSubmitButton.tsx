@@ -1,4 +1,4 @@
-import type { RegisterSubmitButtonProps } from '../interfaces/register/registerInterface';
+import type { RegisterSubmitButtonProps } from '../../types/components/register/registerInterface';
 
 export default function RegisterSubmitButton({ status }: RegisterSubmitButtonProps) {
     return (

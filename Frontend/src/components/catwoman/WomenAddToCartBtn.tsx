@@ -1,4 +1,4 @@
-import type { WomenAddToCartBtnProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenAddToCartBtnProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenAddToCartBtn({ onClick }: WomenAddToCartBtnProps) {
     return (

@@ -1,13 +1,14 @@
-import type { ProductNameInputProps } from '../../interfaces/admin/productModal/productModalInterface';
+import type { ProductNameInputProps } from '../../../types/components/admin/productModal/productModalInterface';
 import type { ChangeEvent } from 'react';
 
 export default function ProductNameInput({ value, onChange }: ProductNameInputProps) {
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label htmlFor="admin-product-name" className="block text-sm font-medium text-gray-700 mb-1">
         Product Name *
       </label>
       <input
+        id="admin-product-name"
         type="text"
         value={value}
         onChange={(e: ChangeEvent<HTMLInputElement>) => onChange(e.target.value)}

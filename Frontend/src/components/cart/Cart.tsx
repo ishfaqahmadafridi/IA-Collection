@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCartStore } from '../zustand/cart/cartStore';
+import { useCartStore } from '../../stores/cart/cartStore';
 
 import CartHeader from './CartHeader';
 import CartLayout from './CartLayout';

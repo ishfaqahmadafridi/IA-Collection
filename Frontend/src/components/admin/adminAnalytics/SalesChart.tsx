@@ -1,6 +1,6 @@
 import SalesBarChart from './SalesBarChart';
 import SalesSummaryStats from './SalesSummaryStats';
-import type { SalesChartProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { SalesChartProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function SalesChart({ data }: SalesChartProps) {
   return (

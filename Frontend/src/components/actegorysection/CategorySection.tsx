@@ -1,19 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { categories } from '../../assets/categoriesList';
-import { CategorySectionProps } from '../interfaces/actegorysection/categorySectionInterface';
-import api from '../../api/client';
+import { activityService } from '../../services/activityService';
 
-export default function CategorySection({}: CategorySectionProps) {
+export default function CategorySection() {
   const navigate = useNavigate();
 
-  const handleCategoryClick = (cat: any) => {
+  const handleCategoryClick = (cat: (typeof categories)[number]) => {
     // Log category click activity
-    api.post('/activity/log/', { 
-        activity_type: 'view_category', 
-        metadata: { category: cat.title, path: cat.page } 
-    }).catch(err => console.error('Failed to log category click', err));
-    
+    activityService.log('view_category', { category: cat.title, path: cat.page }).catch(err => console.error('Failed to log category click', err));
+
     navigate(cat.page);
   };
 

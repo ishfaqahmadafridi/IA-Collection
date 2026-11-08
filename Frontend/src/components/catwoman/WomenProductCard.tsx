@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 import WomenProductImage from './WomenProductImage';
 import WomenProductInfo from './WomenProductInfo';
-import type { WomenProductCardProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductCardProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductCard({ product, showDiscount }: WomenProductCardProps) {
     const setSelectedProduct = useUiStore((state) => state.setSelectedProduct);

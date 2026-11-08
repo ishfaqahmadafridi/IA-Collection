@@ -1,13 +1,14 @@
-import type { DescriptionInputProps } from '../../interfaces/admin/productModal/productModalInterface';
+import type { DescriptionInputProps } from '../../../types/components/admin/productModal/productModalInterface';
 import type { ChangeEvent } from 'react';
 
 export default function DescriptionInput({ value, onChange }: DescriptionInputProps) {
   return (
     <div>
-      <label className="block text-sm font-medium text-gray-700 mb-1">
+      <label htmlFor="admin-description" className="block text-sm font-medium text-gray-700 mb-1">
         Description
       </label>
       <textarea
+        id="admin-description"
         value={value}
         onChange={(e: ChangeEvent<HTMLTextAreaElement>) => onChange(e.target.value)}
         rows={3}

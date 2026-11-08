@@ -1,4 +1,4 @@
-import type { MenProductImageProps } from '../interfaces/catman/catmanInterface';
+import type { MenProductImageProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenProductImage({ src, name, discount }: MenProductImageProps) {
     return (

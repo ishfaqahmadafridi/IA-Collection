@@ -1,4 +1,4 @@
-import type { RegisterFieldProps } from '../interfaces/register/registerInterface';
+import type { RegisterFieldProps } from '../../types/components/register/registerInterface';
 import RegisterInputField from './RegisterInputField';
 
 export default function RegisterEmailField({ onChange }: RegisterFieldProps) {

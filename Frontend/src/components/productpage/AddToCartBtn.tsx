@@ -1,4 +1,4 @@
-import type { AddToCartBtnProps } from '../interfaces/productpage/productpageInterface';
+import type { AddToCartBtnProps } from '../../types/components/productpage/productpageInterface';
 
 export default function AddToCartBtn({ onClick }: AddToCartBtnProps) {
     return (

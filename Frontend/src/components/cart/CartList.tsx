@@ -1,8 +1,9 @@
+import type { CartListProps } from '../../types/components/cart/cartInterface';
 import React from 'react';
 import CartItem from './CartItem';
 import EmptyCart from './EmptyCart';
 
-export default function CartList({ items }) {
+export default function CartList({ items }: CartListProps) {
     if (items.length === 0) {
         return <EmptyCart />;
     }

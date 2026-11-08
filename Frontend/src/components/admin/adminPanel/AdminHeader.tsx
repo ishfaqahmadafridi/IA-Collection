@@ -1,4 +1,4 @@
-import type { AdminHeaderProps } from '../../interfaces/admin/adminPanel/adminPanelInterface';
+import type { AdminHeaderProps } from '../../../types/components/admin/adminPanel/adminPanelInterface';
 
 export default function AdminHeader({ title = "Admin Panel" }: AdminHeaderProps) {
   return (

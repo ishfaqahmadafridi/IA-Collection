@@ -1,27 +1,27 @@
-import type { CatBoyGCategory, CatBoyGProduct } from '../interfaces/catboyG/catBoyGInterface';
+import type { ApiProduct } from '../../types/api';
+import type { CatBoyGCategory, CatBoyGProduct } from '../../types/components/catboyG/catBoyGInterface';
 import CategoryHeader from './CategoryHeader';
 import ProductsGrid from './ProductsGrid';
 
 type CategorySectionProps = {
     category: CatBoyGCategory;
     onProductClick: (product: CatBoyGProduct) => void;
-    backendProducts?: any[];
+    backendProducts?: ApiProduct[];
 };
 
 export default function CategorySection({ category, onProductClick, backendProducts = [] }: CategorySectionProps) {
-    // Convert backend products to the same format as static products
-    const formattedBackendProducts = backendProducts.map((product: any) => ({
-        id: `backend-${product.id}`,
+    // Format API fields for the product cards.
+    const formattedBackendProducts = backendProducts.map((product) => ({
+        id: product.id,
         name: product.name,
-        price: parseFloat(product.price),
-        originalPrice: product.original_price ? parseFloat(product.original_price) : undefined,
+        price: Number(product.price),
+        originalPrice: product.original_price ? Number(product.original_price) : undefined,
         discount: product.discount ? `${product.discount}% OFF` : undefined,
         image: product.image || 'https://placehold.co/400x600',
         isBackend: true,
     }));
 
-    // Combine static and backend products
-    const allProducts = [...formattedBackendProducts, ...category.products];
+    const allProducts = formattedBackendProducts;
 
     return (
         <section className="space-y-8">

@@ -1,4 +1,4 @@
-import type { ProfileContainerProps } from '../interfaces/profile/profileInterface';
+import type { ProfileContainerProps } from '../../types/profile';
 import ProfileHeader from './ProfileHeader';
 import ProfileImageUpload from './ProfileImageUpload';
 import ProfileTabs from './ProfileTabs';

@@ -1,4 +1,4 @@
-import type { MakeupHeaderProps } from '../interfaces/catmakeup/catmakeupInterface';
+import type { MakeupHeaderProps } from '../../types/components/catmakeup/catmakeupInterface';
 
 export default function MakeupHeader({ name, heroImage }: MakeupHeaderProps) {
     return (

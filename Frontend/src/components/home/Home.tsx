@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import HomeContent from './HomeContent';
@@ -27,9 +27,9 @@ export default function Home() {
         <HomeContent page={currentPage} />
       </main>
       <Footer />
-      <SearchDialog 
-        isOpen={isSearchDialogOpen} 
-        onClose={() => setSearchDialogOpen(false)} 
+      <SearchDialog
+        isOpen={isSearchDialogOpen}
+        onClose={() => setSearchDialogOpen(false)}
       />
     </div>
   );
