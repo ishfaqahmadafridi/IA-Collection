@@ -1,4 +1,4 @@
-import type { WomenProductTitleProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductTitleProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductTitle({ name }: WomenProductTitleProps) {
     return (

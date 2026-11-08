@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function CartHeader({ totalQuantity }) {
+export default function CartHeader({ totalQuantity }: { totalQuantity: number }) {
     const navigate = useNavigate();
-    
+
     return (
         <div>
             <button

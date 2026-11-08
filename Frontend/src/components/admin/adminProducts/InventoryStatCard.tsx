@@ -1,4 +1,4 @@
-import type { InventoryStatCardProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import type { InventoryStatCardProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function InventoryStatCard({ label, value, color }: InventoryStatCardProps) {
   return (

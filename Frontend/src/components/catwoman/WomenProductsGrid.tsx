@@ -1,5 +1,5 @@
 import WomenProductCard from './WomenProductCard';
-import type { WomenProductsGridProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductsGridProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductsGrid({ products }: WomenProductsGridProps) {
     return (

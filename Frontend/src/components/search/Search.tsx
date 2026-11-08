@@ -1,26 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-
-export default function SearchPage() {
-  const navigate = useNavigate();
-  // Get the search query from the current window location
-  const params = new URLSearchParams(window.location.search);
-  const q = params.get("q");
-
-  return (
-    <div className="page-container">
-      <main className="search-page">
-        <button onClick={() => navigate('/home')} className="back-button">
-          ← Back to Home
-        </button>
-        <h1>Search Results for "{q}"</h1>
-        <div className="search-results">
-          {/* Search results would be rendered here */}
-          <div className="no-results">
-            <p>No results found for "{q}"</p>
-            <p>Try different keywords or browse our categories</p>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
+import { useSearchParams } from 'react-router-dom';
+import CatalogGrid from '../catalog/CatalogGrid';
+export default function Search() {
+  const [params] = useSearchParams();
+  const query = params.get('q') || '';
+  return <main className="max-w-7xl mx-auto px-4 pt-32 pb-12"><h1 className="text-3xl mb-8">Search results for “{query}”</h1><CatalogGrid query={query} /></main>;
 }

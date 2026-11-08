@@ -1,5 +1,5 @@
 import React from 'react';
-import { CartItemImageProps } from '../interfaces/cart/cartInterface';
+import { CartItemImageProps } from '../../types/components/cart/cartInterface';
 
 export default function CartItemImage({ src, name }: CartItemImageProps) {
     return (

@@ -1,20 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../zustand/auth/authStore';
+import { useProfilePage } from '../../hooks/profile/useProfilePage';
 import ProfileBackButton from './ProfileBackButton';
 import ProfileContainer from './ProfileContainer';
 
 export default function UserProfile() {
-    const navigate = useNavigate();
-    const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-    const [activeTab, setActiveTab] = useState('profile');
-
-    useEffect(() => {
-        if (!isAuthenticated) {
-            navigate('/signin');
-        }
-    }, [isAuthenticated, navigate]);
-
+    const { isAuthenticated, initialized, activeTab, setActiveTab } = useProfilePage();
+    if (!initialized) return <p role="status" className="pt-32">Loading profile…</p>;
     if (!isAuthenticated) {
         return null;
     }

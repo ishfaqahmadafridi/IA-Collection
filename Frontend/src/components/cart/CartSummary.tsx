@@ -1,7 +1,7 @@
 import React from 'react';
 import CartSummaryRow from './CartSummaryRow';
 import CartCheckoutBtn from './CartCheckoutBtn';
-import { CartSummaryProps } from '../interfaces/cart/cartInterface';
+import { CartSummaryProps } from '../../types/components/cart/cartInterface';
 
 export default function CartSummary({ subtotal, totalQuantity }: CartSummaryProps) {
     return (
@@ -9,8 +9,7 @@ export default function CartSummary({ subtotal, totalQuantity }: CartSummaryProp
             <h2 className="text-xl font-bold text-foreground mb-6">Order Summary</h2>
             <div className="space-y-4 text-sm md:text-base">
                 <CartSummaryRow label={`Subtotal (${totalQuantity} items)`} value={subtotal} />
-                <CartSummaryRow label="Shipping" value="Calculated at checkout" isItalic />
-                <CartSummaryRow label="Total" value={subtotal} isBold isLarge />
+                <CartSummaryRow label="Estimated total" value={subtotal} isBold isLarge />
             </div>
             <CartCheckoutBtn />
         </div>

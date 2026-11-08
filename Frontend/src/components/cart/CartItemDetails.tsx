@@ -1,6 +1,6 @@
 import React from 'react';
 import { formatPrice } from '../../lib/utils';
-import { CartItemDetailsProps } from '../interfaces/cart/cartInterface';
+import { CartItemDetailsProps } from '../../types/components/cart/cartInterface';
 
 export default function CartItemDetails({ name, size, price, quantity }: CartItemDetailsProps) {
     return (

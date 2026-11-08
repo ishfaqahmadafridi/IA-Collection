@@ -1,4 +1,4 @@
-import type { QuickStatCardProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { QuickStatCardProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function QuickStatCard({ title, value, gradient }: QuickStatCardProps) {
   return (

@@ -1,4 +1,4 @@
-import type { WomenProductImageProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductImageProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductImage({ src, name, discount }: WomenProductImageProps) {
     return (

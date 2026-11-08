@@ -1,0 +1,12 @@
+# Local runtime and generated artifacts
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+*.sqlite3

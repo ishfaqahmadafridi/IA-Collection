@@ -1,53 +1,73 @@
-import axios from 'axios';
+import axios, { type AxiosRequestConfig, type InternalAxiosRequestConfig } from 'axios';
+import { clearSession, sessionVersion } from '../utils/session';
 
-const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
-    headers: {
-        'Content-Type': 'application/json',
-    },
+const baseURL = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '');
+const http = axios.create({ baseURL, timeout: 15000 });
+type RetryConfig = InternalAxiosRequestConfig & { _retry?: boolean; _session?: number };
+export class ApiError extends Error {
+  constructor(message: string, public status?: number, public fields: unknown = null) {
+    super(message);
+    this.name = 'ApiError';
+  }
+}
+function describe(data: unknown): string | undefined {
+  if (typeof data === 'string') return data;
+  if (Array.isArray(data)) return data.map(describe).filter(Boolean).join(' ');
+  if (data && typeof data === 'object') {
+    return Object.entries(data).map(([key, value]) => {
+      const message = describe(value);
+      return ['detail', 'error', 'non_field_errors'].includes(key) ? message : `${key}: ${message}`;
+    }).join(' ');
+  }
+}
+let refreshing: Promise<string> | null = null;
+http.interceptors.request.use((config: RetryConfig) => {
+  config._session ??= sessionVersion();
+  const token = localStorage.getItem('access_token');
+  if (token) config.headers.Authorization = `Bearer ${token}`;
+  return config;
+});
+http.interceptors.response.use(response => {
+  const config = response.config as RetryConfig;
+  if (config._session !== sessionVersion()) throw new ApiError('Session changed. Please try again.', 401);
+  return response;
+}, async (error: unknown) => {
+  if (!axios.isAxiosError(error)) throw error;
+  const config = error.config as RetryConfig | undefined;
+  const isLogin = config?.url === '/login/' || config?.url === '/register/';
+  if (error.response?.status === 401 && config && !config._retry && !isLogin) {
+    const refresh = localStorage.getItem('refresh_token');
+    if (refresh && config._session === sessionVersion()) {
+      config._retry = true;
+      const version = sessionVersion();
+      let access: string;
+      try {
+        refreshing ??= axios.post<{ access: string }>(`${baseURL}/login/refresh/`, { refresh }, { timeout: 15000 })
+          .then(({ data }) => {
+            if (version !== sessionVersion()) throw new ApiError('Session changed. Please sign in again.', 401);
+            localStorage.setItem('access_token', data.access);
+            return data.access;
+          }).finally(() => { refreshing = null; });
+        access = await refreshing;
+      } catch (refreshError) {
+        if (axios.isAxiosError(refreshError) && [401, 403].includes(refreshError.response?.status ?? 0)
+          && version === sessionVersion()) clearSession();
+        throw new ApiError('Unable to renew your session. Please try again or sign in.', 401);
+      }
+      config.headers.Authorization = `Bearer ${access}`;
+      return http(config);
+    }
+  }
+  if (error.response?.status === 401 && !isLogin && config?._session === sessionVersion()) clearSession();
+  throw new ApiError(describe(error.response?.data) || error.message, error.response?.status, error.response?.data);
 });
 
-api.interceptors.request.use(
-    (config) => {
-        const token = localStorage.getItem('access_token');
-        if (token) {
-            config.headers.Authorization = `Bearer ${token}`;
-        }
-        return config;
-    },
-    (error) => Promise.reject(error)
-);
-
-api.interceptors.response.use(
-    (response) => response.data,
-    async (error) => {
-        const originalRequest = error.config;
-        if (error.response?.status === 401 && !originalRequest._retry) {
-            originalRequest._retry = true;
-            const refresh = localStorage.getItem('refresh_token');
-            if (!refresh) {
-                // If no refresh token, just reject without redirecting
-                // This prevents guest users from being forced to signin
-                return Promise.reject(error);
-            }
-            try {
-                const baseURL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
-                const response = await axios.post(`${baseURL}/login/refresh/`, { refresh });
-                localStorage.setItem('access_token', response.data.access);
-                return api(originalRequest);
-            } catch (refreshError) {
-                localStorage.removeItem('access_token');
-                localStorage.removeItem('refresh_token');
-                // Only redirect if they were actually trying to visit a protected route
-                // or if we really need them to login. 
-                // For now, let's keep it simple: if refresh fails, they are logged out.
-                window.location.href = '/signin';
-                return Promise.reject(refreshError);
-            }
-        }
-        const message = error.response?.data?.detail || error.message || 'An error occurred';
-        return Promise.reject(message);
-    }
-);
-
+// Axios interceptors retain Axios responses; this wrapper exposes typed response bodies.
+const api = {
+  get: async <T>(url: string, config?: AxiosRequestConfig): Promise<T> => (await http.get<T>(url, config)).data,
+  post: async <T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T> => (await http.post<T>(url, data, config)).data,
+  put: async <T>(url: string, data?: unknown): Promise<T> => (await http.put<T>(url, data)).data,
+  patch: async <T>(url: string, data?: unknown): Promise<T> => (await http.patch<T>(url, data)).data,
+  delete: async <T>(url: string): Promise<T> => (await http.delete<T>(url)).data,
+};
 export default api;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useCartStore } from '../zustand/cart/cartStore';
-import { CartItemRemoveProps } from '../interfaces/cart/cartInterface';
+import { useCartStore } from '../../stores/cart/cartStore';
+import { CartItemRemoveProps } from '../../types/components/cart/cartInterface';
 
 export default function CartItemRemove({ id, size }: CartItemRemoveProps) {
     const removeFromCart = useCartStore((state) => state.removeFromCart);

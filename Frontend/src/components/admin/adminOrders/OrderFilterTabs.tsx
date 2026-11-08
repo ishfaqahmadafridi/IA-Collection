@@ -1,4 +1,4 @@
-import type { OrderFilterTabsProps, StatusOption } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrderFilterTabsProps, StatusOption } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrderFilterTabs({ activeFilter, onFilterChange }: OrderFilterTabsProps) {
   const statuses: StatusOption[] = [

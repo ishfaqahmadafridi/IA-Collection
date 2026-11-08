@@ -1,4 +1,4 @@
-import type { SkincareAddToCartBtnProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareAddToCartBtnProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareAddToCartBtn({ onClick }: SkincareAddToCartBtnProps) {
     return (

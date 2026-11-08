@@ -1,33 +1,10 @@
-import { useNavigate } from 'react-router-dom';
-import api from '../../api/client';
-
-type NavItem = { name: string; path: string; cls?: string };
-
+import { STORE_NAVIGATION } from '../../constants/navigation';
+import { useStoreNavigation } from '../../hooks/header/useStoreNavigation';
 export default function NavLinks() {
-    const navigate = useNavigate();
-    const items: NavItem[] = [
-        { name: 'Women', path: '/women' },
-        { name: 'Men', path: '/men' },
-        { name: 'Boys & Girls', path: '/kids' },
-        { name: 'Fragrances', path: '/fragrances' },
-        { name: 'Makeup', path: '/makeup' },
-        { name: 'Skincare', path: '/skincare' },
-        { name: 'Sale', path: '/sale', cls: 'text-rose-600' }
-    ];
-
-    const handleNavClick = (item: NavItem) => {
-        // Log view category activity
-        api.post('/activity/log/', { 
-            activity_type: 'view_category', 
-            metadata: { category: item.name, path: item.path } 
-        }).catch(err => console.error('Failed to log category view', err));
-        
-        navigate(item.path);
-    };
-
+    const handleNavClick = useStoreNavigation();
     return (
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            {items.map(item => (
+            {STORE_NAVIGATION.map(item => (
                 <button
                     key={item.path}
                     onClick={() => handleNavClick(item)}

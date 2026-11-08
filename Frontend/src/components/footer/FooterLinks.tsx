@@ -1,4 +1,4 @@
-import type { FooterLinksProps } from '../interfaces/footer/footerInterface';
+import type { FooterLinksProps } from '../../types/components/footer/footerInterface';
 
 export default function FooterLinks({ title, links }: FooterLinksProps) {
     return (
@@ -7,9 +7,9 @@ export default function FooterLinks({ title, links }: FooterLinksProps) {
             <ul className="space-y-3">
                 {links.map(link => (
                     <li key={link}>
-                        <a href="#" className="text-sm text-foreground/60 hover:text-foreground transition-colors font-medium">
+                        <span className="text-sm text-foreground/60 hover:text-foreground transition-colors font-medium">
                             {link}
-                        </a>
+                        </span>
                     </li>
                 ))}
             </ul>

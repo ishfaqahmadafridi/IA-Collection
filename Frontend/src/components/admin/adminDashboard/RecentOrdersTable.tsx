@@ -1,5 +1,5 @@
 import OrderTableRow from './OrderTableRow';
-import type { RecentOrdersTableProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { RecentOrdersTableProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function RecentOrdersTable({ orders }: RecentOrdersTableProps) {
   return (

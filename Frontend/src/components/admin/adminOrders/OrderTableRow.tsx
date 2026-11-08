@@ -1,5 +1,5 @@
 import OrderStatusSelect from './OrderStatusSelect';
-import type { OrderTableRowProps } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrderTableRowProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrderTableRow({ order, onViewDetails }: OrderTableRowProps) {
   return (

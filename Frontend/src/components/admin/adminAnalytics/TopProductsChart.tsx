@@ -1,5 +1,5 @@
 import ProductRankingItem from './ProductRankingItem';
-import type { TopProductsChartProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { TopProductsChartProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function TopProductsChart({ products }: TopProductsChartProps) {
   return (

@@ -1,6 +1,5 @@
 import React from 'react';
-import { useUiStore } from '../zustand/ui/uiStore';
-import type { HomeContentProps } from '../interfaces/home/homeInterface';
+import type { HomeContentProps } from '../../types/components/home/homeInterface';
 import Main from '../main/Main';
 import Catman from '../catman/Catman';
 import Catwomen from '../catwoman/Catwomen';
@@ -23,8 +22,6 @@ import AdminPanel from '../admin/adminPanel';
 import UserProfile from '../profile/UserProfile';
 
 export default function HomeContent({ page }: HomeContentProps) {
-    const setPage = useUiStore((state) => state.setPage);
-    const handleSetPage = (newPage: string) => setPage(newPage);
 
     const pageMap: Record<string, React.ReactNode> = {
         landing: <LandingPage />,
@@ -51,4 +48,3 @@ export default function HomeContent({ page }: HomeContentProps) {
 
     return (pageMap[page] || <Main />) as React.ReactElement;
 }
-

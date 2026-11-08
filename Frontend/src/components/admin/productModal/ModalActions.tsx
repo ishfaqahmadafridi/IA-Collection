@@ -1,4 +1,4 @@
-import type { ModalActionsProps } from '../../interfaces/admin/productModal/productModalInterface';
+import type { ModalActionsProps } from '../../../types/components/admin/productModal/productModalInterface';
 
 export default function ModalActions({ loading, isEditing, onCancel }: ModalActionsProps) {
   return (

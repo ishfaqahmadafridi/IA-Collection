@@ -1,13 +1,13 @@
 import { IoCreateOutline, IoTrashOutline } from 'react-icons/io5';
-import { useProductsStore } from '../../zustand/admin/productsStore';
-import type { ProductActionsProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import { useProductsStore } from '../../../stores/admin/productsStore';
+import type { ProductActionsProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function ProductActions({ product, onEdit }: ProductActionsProps) {
   const { deleteProduct } = useProductsStore();
 
   const handleDelete = () => {
     if (window.confirm(`Are you sure you want to delete "${product.name}"?`)) {
-      deleteProduct(product.id.toString());
+      void deleteProduct(product.id.toString()).catch(() => { /* Store displays the error. */ });
     }
   };
 

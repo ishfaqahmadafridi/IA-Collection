@@ -1,4 +1,4 @@
-import type { FragranceProductTitleProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductTitleProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductTitle({ name }: FragranceProductTitleProps) {
     return (

@@ -1,4 +1,4 @@
-import type { SalesSummaryStatsProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { SalesSummaryStatsProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function SalesSummaryStats({ totalSales, totalOrders, avgOrderValue }: SalesSummaryStatsProps) {
   return (

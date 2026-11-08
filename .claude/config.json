@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "IA Collection Workspace",
+  "description": "Project reference manifest; native assistant entry points are CLAUDE.md and AGENTS.md.",
+  "skills": [
+    "expert-ui-ux-design",
+    "expert-cloud-agent-architecture",
+    "ponytail",
+    "unslop"
+  ],
+  "rules": [
+    ".agents/rules/01-frontend-architecture.md",
+    ".agents/rules/02-backend-architecture.md",
+    ".agents/rules/03-code-quality-laws.md",
+    ".agents/rules/04-git-workflow.md",
+    ".agents/rules/05-zero-hardcoded-values.md",
+    ".agents/rules/06-ponytail-minimalism.md",
+    ".agents/rules/07-storage-topology-and-store-domain.md"
+  ]
+}

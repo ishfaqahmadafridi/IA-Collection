@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import OrderTableRow from './OrderTableRow';
 import OrderDetailsModal from './OrderDetailsModal';
-import type { OrdersTableProps, Order } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import type { OrdersTableProps, Order } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 
 export default function OrdersTable({ orders }: OrdersTableProps) {
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);

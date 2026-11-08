@@ -1,5 +1,5 @@
 import SkincareProductCard from './SkincareProductCard';
-import type { SkincareProductsGridProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductsGridProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductsGrid({ products }: SkincareProductsGridProps) {
     return (

@@ -1,4 +1,4 @@
-import type { SidebarHeaderProps } from '../../interfaces/admin/adminSidebar/adminSidebarInterface';
+import type { SidebarHeaderProps } from '../../../types/components/admin/adminSidebar/adminSidebarInterface';
 
 export default function SidebarHeader({ title = "Admin Panel", subtitle = "Management Dashboard" }: SidebarHeaderProps) {
   return (

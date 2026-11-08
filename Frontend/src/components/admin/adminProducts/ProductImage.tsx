@@ -1,4 +1,4 @@
-import type { ProductImageProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import type { ProductImageProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function ProductImage({ src, alt }: ProductImageProps) {
   return src ? (

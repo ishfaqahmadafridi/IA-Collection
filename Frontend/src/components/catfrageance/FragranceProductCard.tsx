@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 import FragranceProductImage from './FragranceProductImage';
 import FragranceProductInfo from './FragranceProductInfo';
-import type { FragranceProductCardProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductCardProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductCard({ product, showDiscount }: FragranceProductCardProps) {
     const setSelectedProduct = useUiStore((state) => state.setSelectedProduct);

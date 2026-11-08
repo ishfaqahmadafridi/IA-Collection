@@ -1,5 +1,5 @@
 import { IoArrowBack } from 'react-icons/io5';
-import type { BackButtonProps } from '../interfaces/productpage/productpageInterface';
+import type { BackButtonProps } from '../../types/components/productpage/productpageInterface';
 
 export default function BackButton({ onClick }: BackButtonProps) {
     return (

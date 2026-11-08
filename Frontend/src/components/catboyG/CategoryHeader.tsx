@@ -1,4 +1,4 @@
-import type { CategoryHeaderProps } from '../interfaces/catboyG/catBoyGInterface';
+import type { CategoryHeaderProps } from '../../types/components/catboyG/catBoyGInterface';
 
 export default function CategoryHeader({ name, heroImage }: CategoryHeaderProps) {
     return (

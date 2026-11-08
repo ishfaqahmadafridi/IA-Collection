@@ -1,4 +1,4 @@
-import type { ProfileImageDisplayProps } from '../interfaces/profile/profileInterface';
+import type { ProfileImageDisplayProps } from '../../types/profile';
 
 export default function ProfileImageDisplay({ displayImage, userName }: ProfileImageDisplayProps) {
     return (

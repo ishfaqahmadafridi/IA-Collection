@@ -1,5 +1,6 @@
+import { filterInventory } from '../../../utils/admin/inventory';
 import ProductTableRow from './ProductTableRow';
-import type { Product } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import type { Product } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 interface ProductsTableProps {
   products: Product[];
@@ -8,18 +9,9 @@ interface ProductsTableProps {
 }
 
 export default function ProductsTable({ products = [], onEditProduct, activeFilter }: ProductsTableProps) {
-  const getStockStatus = (stock: number): string => {
-    if (stock === 0) return 'out_of_stock';
-    if (stock <= 10) return 'low_stock';
-    return 'in_stock';
-  };
+  const filteredProducts = filterInventory(products, activeFilter);
 
-  // Ensure products is always an array and filter out null/undefined items
-  const safeProducts = Array.isArray(products) ? products.filter(Boolean) : [];
-  
-  const filteredProducts = safeProducts.filter((product: Product) =>
-    product && (activeFilter === 'all' ? true : getStockStatus(product.stock) === activeFilter)
-  );
+  if (!filteredProducts.length) return <p role="status" className="p-6">No products match this filter.</p>;
 
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden">

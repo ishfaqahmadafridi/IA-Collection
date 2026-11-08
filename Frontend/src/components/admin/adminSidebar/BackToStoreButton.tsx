@@ -1,5 +1,5 @@
 import { IoLogOutOutline } from 'react-icons/io5';
-import type { BackToStoreButtonProps } from '../../interfaces/admin/adminSidebar/adminSidebarInterface';
+import type { BackToStoreButtonProps } from '../../../types/components/admin/adminSidebar/adminSidebarInterface';
 
 export default function BackToStoreButton({ onClick }: BackToStoreButtonProps) {
   return (

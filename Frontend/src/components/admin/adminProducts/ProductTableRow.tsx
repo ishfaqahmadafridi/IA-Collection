@@ -1,7 +1,7 @@
 import ProductImage from './ProductImage';
 import ProductStockBadge from './ProductStockBadge';
 import ProductActions from './ProductActions';
-import type { ProductTableRowProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import type { ProductTableRowProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function ProductTableRow({ product, onEdit }: ProductTableRowProps) {
   return (

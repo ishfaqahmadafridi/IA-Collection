@@ -1,4 +1,4 @@
-import type { SaleProductCardProps } from '../interfaces/sale/saleInterface';
+import type { SaleProductCardProps } from '../../types/components/sale/saleInterface';
 
 export default function SaleProductCard({ product, onClick }: SaleProductCardProps) {
   return (
@@ -21,13 +21,13 @@ export default function SaleProductCard({ product, onClick }: SaleProductCardPro
           {product.categoryType}
         </div>
       </div>
-      
+
       <div className="p-4 grow flex flex-col">
         <h3 className="text-sm font-semibold text-foreground mb-2 line-clamp-2 group-hover:text-rose-600 transition-colors">
           {product.name}
         </h3>
         <p className="text-xs text-foreground/50 mb-3">{product.categoryName}</p>
-        
+
         <div className="mt-auto">
           <div className="flex items-baseline gap-2">
             <span className={`text-xl font-black ${product.originalPrice ? 'text-rose-600' : 'text-foreground'}`}>

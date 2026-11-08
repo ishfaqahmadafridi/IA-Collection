@@ -2,7 +2,7 @@ import WomenProductTitle from './WomenProductTitle';
 import WomenProductPrice from './WomenProductPrice';
 import WomenStockIndicator from './WomenStockIndicator';
 import WomenAddToCartBtn from './WomenAddToCartBtn';
-import type { WomenProductInfoProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenProductInfoProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenProductInfo({ product }: WomenProductInfoProps) {
     return (

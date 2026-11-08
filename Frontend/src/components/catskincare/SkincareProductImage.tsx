@@ -1,4 +1,4 @@
-import type { SkincareProductImageProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductImageProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductImage({ src, name, discount }: SkincareProductImageProps) {
     return (

@@ -1,4 +1,4 @@
-import type { ProductImagesProps } from '../interfaces/productpage/productpageInterface';
+import type { ProductImagesProps } from '../../types/components/productpage/productpageInterface';
 
 export default function ProductImages({ images, name }: ProductImagesProps) {
     return (

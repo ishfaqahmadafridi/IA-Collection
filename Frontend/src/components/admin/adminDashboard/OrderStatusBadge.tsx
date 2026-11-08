@@ -1,4 +1,4 @@
-import type { OrderStatusBadgeProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { OrderStatusBadgeProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function OrderStatusBadge({ status }: OrderStatusBadgeProps) {
   const statusStyles: Record<string, string> = {

@@ -1,4 +1,4 @@
-import type { SidebarMenuItemProps } from '../../interfaces/admin/adminSidebar/adminSidebarInterface';
+import type { SidebarMenuItemProps } from '../../../types/components/admin/adminSidebar/adminSidebarInterface';
 
 export default function SidebarMenuItem({ id, label, icon: Icon, isActive, onClick }: SidebarMenuItemProps) {
   return (

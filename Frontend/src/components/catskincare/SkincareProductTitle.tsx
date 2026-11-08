@@ -1,4 +1,4 @@
-import type { SkincareProductTitleProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductTitleProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductTitle({ name }: SkincareProductTitleProps) {
     return (

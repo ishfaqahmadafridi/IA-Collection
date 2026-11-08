@@ -1,4 +1,4 @@
-import type { CatBoyGProduct } from '../interfaces/catboyG/catBoyGInterface';
+import type { CatBoyGProduct } from '../../types/components/catboyG/catBoyGInterface';
 import AddToCartButton from './AddToCartButton';
 import ProductPrice from './ProductPrice';
 import ProductTitle from './ProductTitle';

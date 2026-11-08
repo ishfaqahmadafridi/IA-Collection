@@ -1,5 +1,5 @@
 import { formatPrice } from '../../lib/utils';
-import type { MenProductPriceProps } from '../interfaces/catman/catmanInterface';
+import type { MenProductPriceProps } from '../../types/components/catman/catmanInterface';
 
 export default function MenProductPrice({ price, originalPrice }: MenProductPriceProps) {
     return (

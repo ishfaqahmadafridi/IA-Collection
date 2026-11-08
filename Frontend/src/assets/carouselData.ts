@@ -2,7 +2,7 @@ import eid from "./images/eid.jpeg";
 import chalo_saj_dhaj_k from "./images/chalo_saj_dhaj_k.jpeg";
 import iFr from "./images/iFr.jpeg";
 import FEET from "./images/FEET.jpeg";
-import { CarouselImageProps } from "../components/interfaces/carousal/CarousalInterface";
+import { CarouselImageProps } from "../types/components/carousal/CarousalInterface";
 
 export const carouselImages: CarouselImageProps[] = [
   { id: 1, src: eid, alt: "Eid Collection" },

@@ -1,5 +1,5 @@
 import { IoGridOutline, IoCubeOutline, IoCartOutline, IoStatsChartOutline } from 'react-icons/io5';
-import type { SidebarNavProps } from '../../interfaces/admin/adminSidebar/adminSidebarInterface';
+import type { SidebarNavProps } from '../../../types/components/admin/adminSidebar/adminSidebarInterface';
 import SidebarMenuItem from './SidebarMenuItem';
 
 export default function SidebarNav({ currentView, onNavigate }: SidebarNavProps) {

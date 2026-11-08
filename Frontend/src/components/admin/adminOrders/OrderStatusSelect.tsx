@@ -1,5 +1,5 @@
-import { useOrdersStore } from '../../zustand/admin/ordersStore';
-import type { OrderStatusSelectProps } from '../../interfaces/admin/adminOrders/adminOrdersInterface';
+import { useOrdersStore } from '../../../stores/admin/ordersStore';
+import type { OrderStatusSelectProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 import type { ChangeEvent } from 'react';
 
 export default function OrderStatusSelect({ order }: OrderStatusSelectProps) {
@@ -19,6 +19,7 @@ export default function OrderStatusSelect({ order }: OrderStatusSelectProps) {
 
   return (
     <select
+      aria-label={`Status for order ${order.order_number}`}
       value={order.status}
       onChange={handleStatusChange}
       className={`px-3 py-1 rounded-lg text-xs font-medium border-0 cursor-pointer ${

@@ -1,4 +1,4 @@
-import { Category } from '../components/interfaces/actegorysection/categorySectionInterface';
+import { Category } from '../types/components/actegorysection/categorySectionInterface';
 
 export const categories: Category[] = [
   { id: 1, title: "BOYS & GIRLS", page: "/kids" },

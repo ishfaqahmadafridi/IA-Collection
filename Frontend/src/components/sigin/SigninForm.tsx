@@ -1,22 +1,22 @@
 import { useNavigate } from 'react-router-dom';
-import type { SigninFormProps } from '../interfaces/sigin/siginInterface';
+import type { SigninFormProps } from '../../types/components/sigin/siginInterface';
 import SigninInputField from './SigninInputField';
 
-export default function SigninForm({ 
-  email, 
-  setEmail, 
-  password, 
-  setPassword, 
-  handleSubmit, 
-  status, 
-  error 
+export default function SigninForm({
+  username,
+  setUsername,
+  password,
+  setPassword,
+  handleSubmit,
+  status,
+  error
 }: SigninFormProps) {
   const navigate = useNavigate();
 
   return (
     <form className="space-y-5" onSubmit={handleSubmit}>
-      {error && (
-        <div className="bg-rose-50 border-2 border-rose-300 text-rose-700 px-4 py-3 rounded-xl text-sm font-semibold text-center shadow-sm animate-shake">
+      {Boolean(error) && (
+        <div role="alert" className="bg-rose-50 border-2 border-rose-300 text-rose-700 px-4 py-3 rounded-xl text-sm font-semibold text-center shadow-sm animate-shake">
           <span className="flex items-center justify-center gap-2">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -25,13 +25,13 @@ export default function SigninForm({
           </span>
         </div>
       )}
-      
+
       <SigninInputField
         label="Username"
         type="text"
         placeholder="Enter your username"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
         icon={
           <svg className="w-5 h-5 text-gray-400 group-focus-within:text-rose-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -73,8 +73,8 @@ export default function SigninForm({
       <div className="mt-8 pt-6 border-t border-gray-200">
         <p className="text-center text-sm text-gray-600">
           Don't have an account?{' '}
-          <button 
-            onClick={() => navigate('/register')} 
+          <button type="button"
+            onClick={() => navigate('/register')}
             className="font-bold text-rose-600 hover:text-rose-700 hover:underline transition-all"
           >
             Create one now

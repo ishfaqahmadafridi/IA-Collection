@@ -1,4 +1,4 @@
-import type { SalesBarChartProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { SalesBarChartProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function SalesBarChart({ dailySales }: SalesBarChartProps) {
   const maxSale = Math.max(...dailySales.map((d) => d.total), 1);

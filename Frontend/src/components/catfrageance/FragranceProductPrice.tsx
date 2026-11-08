@@ -1,5 +1,5 @@
 import { formatPrice } from '../../lib/utils';
-import type { FragranceProductPriceProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceProductPriceProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceProductPrice({ price, originalPrice }: FragranceProductPriceProps) {
     return (

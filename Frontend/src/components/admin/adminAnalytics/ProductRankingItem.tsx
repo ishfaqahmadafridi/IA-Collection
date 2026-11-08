@@ -1,4 +1,4 @@
-import type { ProductRankingItemProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { ProductRankingItemProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function ProductRankingItem({ product, rank }: ProductRankingItemProps) {
   const rankColors = ['bg-yellow-500', 'bg-gray-400', 'bg-amber-600'];

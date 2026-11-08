@@ -7,15 +7,10 @@ import ManFootwear from '../manFooterwear/ManFootwear';
 import MenCategory from '../menCategoey/MenCategory';
 import CategorySection from '../actegorysection/CategorySection';
 import ScrollReveal from '../layout/ScrollReveal';
-import { useEffect } from 'react';
-import api from '../../api/client';
+import { usePageActivity } from '../../hooks/usePageActivity';
 
 export default function Main() {
-    useEffect(() => {
-        // Log view_home activity
-        api.post('/activity/log/', { activity_type: 'view_home' })
-           .catch(err => console.error('Failed to log home view', err));
-    }, []);
+    usePageActivity('view_home');
 
     return (
         <>

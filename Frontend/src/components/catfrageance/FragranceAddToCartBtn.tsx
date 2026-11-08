@@ -1,4 +1,4 @@
-import type { FragranceAddToCartBtnProps } from '../interfaces/catfragrance/catfragranceInterface';
+import type { FragranceAddToCartBtnProps } from '../../types/components/catfragrance/catfragranceInterface';
 
 export default function FragranceAddToCartBtn({ onClick }: FragranceAddToCartBtnProps) {
     return (

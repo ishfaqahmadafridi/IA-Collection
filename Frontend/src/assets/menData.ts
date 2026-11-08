@@ -5,11 +5,6 @@ import img2 from './images/men-tshirts/imgT2.webp';
 import img3 from './images/men-tshirts/imgT3.webp';
 import img4 from './images/men-tshirts/imgT4.webp';
 
-import main2 from './images/men-tshirts/imgTemain.webp';
-import imgS1 from './images/men-tshirts/imgTe1.webp';
-import imgS2 from './images/men-tshirts/imgTe2.webp';
-import imgS3 from './images/men-tshirts/imgTe3.webp';
-import imgS4 from './images/men-tshirts/imgTe4.webp';
 
 // Peshawari
 import mainPeshawari from './images/men-shoes/peshawari(1).jfif';

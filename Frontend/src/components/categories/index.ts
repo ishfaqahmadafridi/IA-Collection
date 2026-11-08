@@ -1,2 +1,2 @@
 export { categories } from './categories';
-export type { Category } from '../interfaces/categories/categoriesInterFace';
+export type { Category } from '../../types/components/categories/categoriesInterFace';

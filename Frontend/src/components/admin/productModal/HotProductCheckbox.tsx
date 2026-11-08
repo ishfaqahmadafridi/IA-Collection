@@ -1,4 +1,4 @@
-import type { HotProductCheckboxProps } from '../../interfaces/admin/productModal/productModalInterface';
+import type { HotProductCheckboxProps } from '../../../types/components/admin/productModal/productModalInterface';
 import type { ChangeEvent } from 'react';
 
 export default function HotProductCheckbox({ checked, onChange }: HotProductCheckboxProps) {

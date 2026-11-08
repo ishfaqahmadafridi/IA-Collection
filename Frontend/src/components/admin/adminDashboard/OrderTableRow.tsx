@@ -1,5 +1,5 @@
 import OrderStatusBadge from './OrderStatusBadge';
-import type { OrderTableRowProps } from '../../interfaces/admin/adminDashboard/adminDashboardInterface';
+import type { OrderTableRowProps } from '../../../types/components/admin/adminDashboard/adminDashboardInterface';
 
 export default function OrderTableRow({ order }: OrderTableRowProps) {
   return (

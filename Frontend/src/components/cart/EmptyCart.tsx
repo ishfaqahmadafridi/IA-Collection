@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function EmptyCart() {
     const navigate = useNavigate();
-    
+
     return (
         <div className="text-center py-24 bg-card rounded-2xl border border-border shadow-sm transition-colors duration-500">
             <div className="text-gray-200 mb-6 flex justify-center">

@@ -3,7 +3,8 @@ Product Management Views
 Admin CRUD operations and inventory management for products
 """
 
-from rest_framework import viewsets, status
+from rest_framework import viewsets, status, serializers
+from django.db.models.deletion import ProtectedError
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAdminUser
@@ -65,22 +66,17 @@ class AdminProductViewSet(viewsets.ModelViewSet):
         Update product stock level
         Expects 'stock' parameter in request data
         """
+        class StockSerializer(serializers.Serializer):
+            stock = serializers.IntegerField(min_value=0)
+        serializer = StockSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
         product = self.get_object()
-        new_stock = request.data.get('stock')
-        
-        if new_stock is not None:
-            try:
-                product.stock = int(new_stock)
-                product.save()
-                serializer = self.get_serializer(product)
-                return Response(serializer.data)
-            except ValueError:
-                return Response(
-                    {'error': 'Stock must be a valid integer'},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-        
-        return Response(
-            {'error': 'Stock value is required'},
-            status=status.HTTP_400_BAD_REQUEST
-        )
+        product.stock = serializer.validated_data['stock']
+        product.save(update_fields=['stock', 'updated_at'])
+        return Response(self.get_serializer(product).data)
+
+    def destroy(self, request, *args, **kwargs):
+        try:
+            return super().destroy(request, *args, **kwargs)
+        except ProtectedError:
+            return Response({'detail': 'Products referenced by orders cannot be deleted. Set stock to zero instead.'}, status=409)

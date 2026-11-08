@@ -1,4 +1,4 @@
-import type { ActivityBreakdownProps } from '../../interfaces/admin/adminAnalytics/adminAnalyticsInterface';
+import type { ActivityBreakdownProps } from '../../../types/components/admin/adminAnalytics/adminAnalyticsInterface';
 
 export default function ActivityBreakdown({ breakdown }: ActivityBreakdownProps) {
   const colors = ['bg-blue-500', 'bg-green-500', 'bg-yellow-500', 'bg-purple-500', 'bg-pink-500'];

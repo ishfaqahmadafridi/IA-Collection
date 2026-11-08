@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useLandingStore } from '../zustand/landing/landingStore';
+import { useLandingStore } from '../../stores/landing/landingStore';
 export default function EnterButton() {
     const navigate = useNavigate();
     const { showButton, setShowButton } = useLandingStore();

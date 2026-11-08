@@ -1,4 +1,4 @@
-import type { WomenHeaderProps } from '../interfaces/catwoman/catwomanInterface';
+import type { WomenHeaderProps } from '../../types/components/catwoman/catwomanInterface';
 
 export default function WomenHeader({ name, heroImage }: WomenHeaderProps) {
     return (

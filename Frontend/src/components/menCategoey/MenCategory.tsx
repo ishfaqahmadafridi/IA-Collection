@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 import MenCategoryGrid from './MenCategoryGrid';
 
 export default function MenCategory() {

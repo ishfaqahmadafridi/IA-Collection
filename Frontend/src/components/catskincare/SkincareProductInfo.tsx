@@ -1,9 +1,9 @@
-import { useCartStore } from '../zustand/cart/cartStore';
+import { useCartStore } from '../../stores/cart/cartStore';
 import SkincareProductTitle from './SkincareProductTitle';
 import SkincareProductPrice from './SkincareProductPrice';
 import SkincareStockIndicator from './SkincareStockIndicator';
 import SkincareAddToCartBtn from './SkincareAddToCartBtn';
-import type { SkincareProductInfoProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductInfoProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductInfo({ product }: SkincareProductInfoProps) {
     const addToCart = useCartStore((state) => state.addToCart);

@@ -1,5 +1,5 @@
 import { formatPrice } from '../../lib/utils';
-import type { SkincareProductPriceProps } from '../interfaces/catskincare/catskincareInterface';
+import type { SkincareProductPriceProps } from '../../types/components/catskincare/catskincareInterface';
 
 export default function SkincareProductPrice({ price, originalPrice }: SkincareProductPriceProps) {
     return (

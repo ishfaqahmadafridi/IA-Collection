@@ -1,5 +1,5 @@
 import { IoAddOutline } from 'react-icons/io5';
-import type { ProductsHeaderProps } from '../../interfaces/admin/adminProducts/adminProductsInterface';
+import type { ProductsHeaderProps } from '../../../types/components/admin/adminProducts/adminProductsInterface';
 
 export default function ProductsHeader({ onAddProduct }: ProductsHeaderProps) {
   return (

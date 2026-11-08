@@ -1,4 +1,4 @@
-import type { MakeupProductImageProps } from '../interfaces/catmakeup/catmakeupInterface';
+import type { MakeupProductImageProps } from '../../types/components/catmakeup/catmakeupInterface';
 
 export default function MakeupProductImage({ src, name, discount }: MakeupProductImageProps) {
     return (

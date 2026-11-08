@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import { useUiStore } from '../zustand/ui/uiStore';
+import { useUiStore } from '../../stores/ui/uiStore';
 
-import type { WomenFootwearCardProps } from '../interfaces/womenfoot/womenfootInterface';
+import type { WomenFootwearCardProps } from '../../types/components/womenfoot/womenfootInterface';
 
 export default function WomenFootwearCard({ category }: WomenFootwearCardProps) {
     const setSelectedCategory = useUiStore((state) => state.setSelectedCategory);

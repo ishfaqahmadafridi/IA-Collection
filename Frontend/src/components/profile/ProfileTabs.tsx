@@ -1,4 +1,4 @@
-import type { ProfileTabsProps } from '../interfaces/profile/profileInterface';
+import type { ProfileTabsProps } from '../../types/profile';
 import ProfileTabIndicator from './ProfileTabIndicator';
 
 export default function ProfileTabs({ activeTab, setActiveTab }: ProfileTabsProps) {

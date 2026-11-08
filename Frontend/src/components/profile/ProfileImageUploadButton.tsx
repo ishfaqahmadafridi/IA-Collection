@@ -1,4 +1,4 @@
-import type { ProfileImageUploadButtonProps } from '../interfaces/profile/profileInterface';
+import type { ProfileImageUploadButtonProps } from '../../types/profile';
 
 export default function ProfileImageUploadButton({ onUpload, isUploading, show }: ProfileImageUploadButtonProps) {
     if (!show) return null;
