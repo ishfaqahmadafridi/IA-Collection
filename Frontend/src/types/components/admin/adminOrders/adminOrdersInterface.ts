@@ -1,4 +1,5 @@
 export interface Order {
+    allowed_statuses?: string[];
     id: number;
     order_number: string;
     user_name: string;

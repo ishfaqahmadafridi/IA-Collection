@@ -3,7 +3,10 @@ Product Management Views
 Admin CRUD operations and inventory management for products
 """
 
-from rest_framework import viewsets, status, serializers
+from rest_framework import viewsets
+from django.conf import settings
+from ..serializers.queries import StockUpdateSerializer
+from ..selectors.catalog import products
 from django.db.models.deletion import ProtectedError
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -18,7 +21,7 @@ class AdminProductViewSet(viewsets.ModelViewSet):
     Admin CRUD operations for products
     Provides endpoints for product management and inventory tracking
     """
-    queryset = Product.objects.all()
+    queryset = products()
     serializer_class = ProductSerializer
     permission_classes = [IsAdminUser]
 
@@ -31,7 +34,7 @@ class AdminProductViewSet(viewsets.ModelViewSet):
         total_products = Product.objects.count()
         in_stock = Product.objects.filter(stock__gt=0).count()
         out_of_stock = Product.objects.filter(stock=0).count()
-        low_stock = Product.objects.filter(stock__gt=0, stock__lt=5).count()
+        low_stock = Product.objects.filter(stock__gt=0, stock__lt=settings.LOW_STOCK_THRESHOLD).count()
         
         return Response({
             'total_products': total_products,
@@ -46,9 +49,9 @@ class AdminProductViewSet(viewsets.ModelViewSet):
         Get products with low stock (stock > 0 and < 5)
         Useful for inventory alerts
         """
-        products = Product.objects.filter(stock__gt=0, stock__lt=5)
-        serializer = self.get_serializer(products, many=True)
-        return Response(serializer.data)
+        products = Product.objects.filter(stock__gt=0, stock__lt=settings.LOW_STOCK_THRESHOLD)
+        page = self.paginate_queryset(products.select_related('category').order_by('id'))
+        return self.get_paginated_response(self.get_serializer(page, many=True).data)
 
     @action(detail=False, methods=['get'])
     def out_of_stock_products(self, request):
@@ -57,8 +60,8 @@ class AdminProductViewSet(viewsets.ModelViewSet):
         Helps identify products needing restocking
         """
         products = Product.objects.filter(stock=0)
-        serializer = self.get_serializer(products, many=True)
-        return Response(serializer.data)
+        page = self.paginate_queryset(products.select_related('category').order_by('id'))
+        return self.get_paginated_response(self.get_serializer(page, many=True).data)
 
     @action(detail=True, methods=['post'])
     def update_stock(self, request, pk=None):
@@ -66,9 +69,7 @@ class AdminProductViewSet(viewsets.ModelViewSet):
         Update product stock level
         Expects 'stock' parameter in request data
         """
-        class StockSerializer(serializers.Serializer):
-            stock = serializers.IntegerField(min_value=0)
-        serializer = StockSerializer(data=request.data)
+        serializer = StockUpdateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         product = self.get_object()
         product.stock = serializer.validated_data['stock']

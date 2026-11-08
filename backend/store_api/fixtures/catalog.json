@@ -1,0 +1,1366 @@
+{
+  "categories": [
+    {
+      "slug": "men",
+      "name": "Men",
+      "parent": null
+    },
+    {
+      "name": "Kurta",
+      "slug": "men-kurta",
+      "parent": "men"
+    },
+    {
+      "name": "Shalwar Kameez",
+      "slug": "men-shalwar-kameez",
+      "parent": "men"
+    },
+    {
+      "name": "Sherwani",
+      "slug": "men-sherwani",
+      "parent": "men"
+    },
+    {
+      "name": "Waistcoat",
+      "slug": "men-waistcoat",
+      "parent": "men"
+    },
+    {
+      "name": "T-Shirts",
+      "slug": "men-tshirts",
+      "parent": "men"
+    },
+    {
+      "name": "Shirts",
+      "slug": "men-shirts",
+      "parent": "men"
+    },
+    {
+      "name": "Jeans",
+      "slug": "men-jeans",
+      "parent": "men"
+    },
+    {
+      "name": "Shoes",
+      "slug": "men-shoes",
+      "parent": "men"
+    },
+    {
+      "name": "Peshawari",
+      "slug": "men-peshawari",
+      "parent": "men"
+    },
+    {
+      "name": "Sandals",
+      "slug": "men-sandals",
+      "parent": "men"
+    },
+    {
+      "name": "Chappal",
+      "slug": "men-chappal",
+      "parent": "men"
+    },
+    {
+      "slug": "women",
+      "name": "Women",
+      "parent": null
+    },
+    {
+      "name": "Unstitched",
+      "slug": "women-unstitched",
+      "parent": "women"
+    },
+    {
+      "name": "Stitched",
+      "slug": "women-stitched",
+      "parent": "women"
+    },
+    {
+      "name": "Kurti",
+      "slug": "women-kurti",
+      "parent": "women"
+    },
+    {
+      "name": "Trousers",
+      "slug": "women-trousers",
+      "parent": "women"
+    },
+    {
+      "name": "Dresses",
+      "slug": "women-dresses",
+      "parent": "women"
+    },
+    {
+      "name": "Shirts",
+      "slug": "women-shirts",
+      "parent": "women"
+    },
+    {
+      "name": "Shoes",
+      "slug": "women-shoes",
+      "parent": "women"
+    },
+    {
+      "name": "Heels",
+      "slug": "women-heels",
+      "parent": "women"
+    },
+    {
+      "name": "Flats",
+      "slug": "women-flats",
+      "parent": "women"
+    },
+    {
+      "slug": "kids",
+      "name": "Kids",
+      "parent": null
+    },
+    {
+      "name": "Boys Clothing",
+      "slug": "kids-boys",
+      "parent": "kids"
+    },
+    {
+      "name": "Girls Clothing",
+      "slug": "kids-girls",
+      "parent": "kids"
+    },
+    {
+      "name": "Kids Shoes",
+      "slug": "kids-shoes",
+      "parent": "kids"
+    },
+    {
+      "slug": "fragrances",
+      "name": "Fragrances",
+      "parent": null
+    },
+    {
+      "name": "Perfumes",
+      "slug": "perfumes",
+      "parent": "fragrances"
+    },
+    {
+      "name": "Body Sprays",
+      "slug": "body-sprays",
+      "parent": "fragrances"
+    },
+    {
+      "name": "Attars",
+      "slug": "attars",
+      "parent": "fragrances"
+    },
+    {
+      "slug": "skincare",
+      "name": "Skincare",
+      "parent": null
+    },
+    {
+      "name": "Face Creams",
+      "slug": "face-creams",
+      "parent": "skincare"
+    },
+    {
+      "name": "Serums",
+      "slug": "serums",
+      "parent": "skincare"
+    },
+    {
+      "name": "Cleansers",
+      "slug": "cleansers",
+      "parent": "skincare"
+    },
+    {
+      "name": "Sunscreen",
+      "slug": "sunscreen",
+      "parent": "skincare"
+    },
+    {
+      "slug": "makeup",
+      "name": "Makeup",
+      "parent": null
+    },
+    {
+      "name": "Lipstick",
+      "slug": "lipstick",
+      "parent": "makeup"
+    },
+    {
+      "name": "Foundation",
+      "slug": "foundation",
+      "parent": "makeup"
+    },
+    {
+      "name": "Eyeshadow",
+      "slug": "eyeshadow",
+      "parent": "makeup"
+    },
+    {
+      "name": "Mascara",
+      "slug": "mascara",
+      "parent": "makeup"
+    }
+  ],
+  "products": [
+    {
+      "slug": "men-kurta",
+      "name": "Premium Cotton Kurta",
+      "price": 2500,
+      "original_price": 3500,
+      "discount": 28,
+      "stock": 15,
+      "description": "Comfortable cotton kurta for daily wear",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-kurta",
+      "name": "Designer Embroidered Kurta",
+      "price": 3800,
+      "original_price": 5200,
+      "discount": 27,
+      "stock": 10,
+      "description": "Elegant embroidered design for special occasions",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-kurta",
+      "name": "Silk Blend Kurta",
+      "price": 4200,
+      "original_price": 5500,
+      "discount": 24,
+      "stock": 8,
+      "description": "Luxurious silk blend kurta",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-kurta",
+      "name": "Casual Linen Kurta",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 20,
+      "description": "Breathable linen kurta",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-kurta",
+      "name": "Festive Kurta Collection",
+      "price": 4500,
+      "original_price": 5800,
+      "discount": 22,
+      "stock": 12,
+      "description": "Perfect for Eid celebrations",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-kurta",
+      "name": "Summer Cotton Kurta",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Light summer wear",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shalwar-kameez",
+      "name": "Classic White Shalwar Kameez",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 12,
+      "description": "Traditional white shalwar kameez",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shalwar-kameez",
+      "name": "Printed Shalwar Kameez",
+      "price": 4000,
+      "original_price": 5000,
+      "discount": 20,
+      "stock": 8,
+      "description": "Stylish printed design",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shalwar-kameez",
+      "name": "Embroidered Shalwar Kameez",
+      "price": 5500,
+      "original_price": 7000,
+      "discount": 21,
+      "stock": 6,
+      "description": "Beautiful embroidery work",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shalwar-kameez",
+      "name": "Formal Shalwar Kameez",
+      "price": 4800,
+      "original_price": 6000,
+      "discount": 20,
+      "stock": 10,
+      "description": "For formal occasions",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sherwani",
+      "name": "Royal Gold Sherwani",
+      "price": 15000,
+      "original_price": 20000,
+      "discount": 25,
+      "stock": 5,
+      "description": "Luxurious wedding sherwani",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sherwani",
+      "name": "Classic Black Sherwani",
+      "price": 12000,
+      "original_price": 15000,
+      "discount": 20,
+      "stock": 7,
+      "description": "Elegant black sherwani",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sherwani",
+      "name": "Embroidered Cream Sherwani",
+      "price": 18000,
+      "original_price": 22000,
+      "discount": 18,
+      "stock": 4,
+      "description": "Designer cream sherwani",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sherwani",
+      "name": "Maroon Velvet Sherwani",
+      "price": 16000,
+      "original_price": 20000,
+      "discount": 20,
+      "stock": 6,
+      "description": "Rich velvet sherwani",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-waistcoat",
+      "name": "Embroidered Waistcoat",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 15,
+      "description": "Traditional embroidered waistcoat",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-waistcoat",
+      "name": "Velvet Waistcoat",
+      "price": 4200,
+      "original_price": 5200,
+      "discount": 19,
+      "stock": 10,
+      "description": "Rich velvet fabric",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-waistcoat",
+      "name": "Formal Waistcoat",
+      "price": 2800,
+      "original_price": 3500,
+      "discount": 20,
+      "stock": 18,
+      "description": "Sleek formal design",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-waistcoat",
+      "name": "Wedding Waistcoat",
+      "price": 5500,
+      "original_price": 7000,
+      "discount": 21,
+      "stock": 8,
+      "description": "Perfect for weddings",
+      "image": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shirts",
+      "name": "Formal White Shirt",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 25,
+      "description": "Classic formal shirt",
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shirts",
+      "name": "Casual Blue Shirt",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 30,
+      "description": "Comfortable casual wear",
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shirts",
+      "name": "Printed Casual Shirt",
+      "price": 2000,
+      "original_price": 2600,
+      "discount": 23,
+      "stock": 20,
+      "description": "Trendy printed design",
+      "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shirts",
+      "name": "Slim Fit Shirt",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 18,
+      "description": "Modern slim fit",
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-tshirts",
+      "name": "Cotton Crew Neck T-Shirt",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 40,
+      "description": "Basic cotton tee",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-tshirts",
+      "name": "Polo T-Shirt",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 35,
+      "description": "Classic polo style",
+      "image": "https://images.unsplash.com/photo-1625910513413-5fc42e596d5c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-tshirts",
+      "name": "Graphic Print T-Shirt",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 28,
+      "description": "Trendy graphic design",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-tshirts",
+      "name": "V-Neck T-Shirt",
+      "price": 1300,
+      "original_price": 1700,
+      "discount": 24,
+      "stock": 32,
+      "description": "Comfortable V-neck",
+      "image": "https://images.unsplash.com/photo-1625910513413-5fc42e596d5c?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shoes",
+      "name": "Leather Formal Shoes",
+      "price": 4500,
+      "original_price": 5500,
+      "discount": 18,
+      "stock": 15,
+      "description": "Premium leather shoes",
+      "image": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shoes",
+      "name": "Casual Sneakers",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 22,
+      "description": "Comfortable everyday wear",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shoes",
+      "name": "Sports Shoes",
+      "price": 3800,
+      "original_price": 4800,
+      "discount": 21,
+      "stock": 18,
+      "description": "Athletic performance",
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-shoes",
+      "name": "Loafers",
+      "price": 3500,
+      "original_price": 4200,
+      "discount": 17,
+      "stock": 12,
+      "description": "Stylish loafers",
+      "image": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-peshawari",
+      "name": "Classic Peshawari Chappal",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 20,
+      "description": "Traditional Peshawari",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-peshawari",
+      "name": "Premium Leather Peshawari",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 15,
+      "description": "High quality leather",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-peshawari",
+      "name": "Embroidered Peshawari",
+      "price": 4000,
+      "original_price": 5000,
+      "discount": 20,
+      "stock": 10,
+      "description": "Handcrafted embroidery",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-peshawari",
+      "name": "Brown Peshawari",
+      "price": 2800,
+      "original_price": 3500,
+      "discount": 20,
+      "stock": 18,
+      "description": "Classic brown color",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sandals",
+      "name": "Leather Sandals",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 25,
+      "description": "Comfortable leather sandals",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sandals",
+      "name": "Sports Sandals",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 30,
+      "description": "Active lifestyle sandals",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sandals",
+      "name": "Casual Flip Flops",
+      "price": 800,
+      "original_price": 1200,
+      "discount": 33,
+      "stock": 40,
+      "description": "Everyday flip flops",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "men-sandals",
+      "name": "Premium Sandals",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 15,
+      "description": "Premium quality sandals",
+      "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Lawn Suit UNS-001",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 15,
+      "description": "3-piece lawn suit",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Premium Lawn UNS-002",
+      "price": 4200,
+      "original_price": 5600,
+      "discount": 25,
+      "stock": 12,
+      "description": "Designer printed lawn",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Floral Print Lawn UNS-003",
+      "price": 3800,
+      "original_price": 4800,
+      "discount": 21,
+      "stock": 18,
+      "description": "Beautiful floral print",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Embroidered Lawn UNS-004",
+      "price": 4500,
+      "original_price": 6000,
+      "discount": 25,
+      "stock": 10,
+      "description": "Heavily embroidered",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Digital Print UNS-005",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 20,
+      "description": "Modern digital print",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-unstitched",
+      "name": "Traditional Lawn UNS-006",
+      "price": 3900,
+      "original_price": 4900,
+      "discount": 20,
+      "stock": 14,
+      "description": "Classic traditional motifs",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-kurti",
+      "name": "Printed Kurti USTK-285",
+      "price": 2514,
+      "original_price": 4190,
+      "discount": 40,
+      "stock": 25,
+      "description": "Stylish printed kurti",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-kurti",
+      "name": "Embroidered Kurti",
+      "price": 3200,
+      "original_price": 4200,
+      "discount": 24,
+      "stock": 18,
+      "description": "Beautiful embroidery",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-kurti",
+      "name": "Cotton Kurti",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 30,
+      "description": "Comfortable cotton",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-kurti",
+      "name": "Designer Kurti",
+      "price": 3800,
+      "original_price": 5000,
+      "discount": 24,
+      "stock": 12,
+      "description": "Designer collection",
+      "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-dresses",
+      "name": "Floral Summer Dress",
+      "price": 2800,
+      "original_price": 3500,
+      "discount": 20,
+      "stock": 20,
+      "description": "Light and breezy",
+      "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-dresses",
+      "name": "Evening Gown",
+      "price": 5500,
+      "original_price": 7000,
+      "discount": 21,
+      "stock": 8,
+      "description": "Elegant party wear",
+      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-dresses",
+      "name": "Casual Maxi Dress",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 15,
+      "description": "Comfortable maxi",
+      "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-dresses",
+      "name": "Party Dress",
+      "price": 4500,
+      "original_price": 5800,
+      "discount": 22,
+      "stock": 10,
+      "description": "Stunning party wear",
+      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-shirts",
+      "name": "Cotton Blouse",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Comfortable cotton blouse",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-shirts",
+      "name": "Formal Shirt",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 20,
+      "description": "Professional wear",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-shirts",
+      "name": "Casual Top",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 30,
+      "description": "Trendy casual top",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-shirts",
+      "name": "Printed Blouse",
+      "price": 2000,
+      "original_price": 2600,
+      "discount": 23,
+      "stock": 18,
+      "description": "Beautiful printed design",
+      "image": "https://images.unsplash.com/photo-1583391733956-6c78276477e2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-heels",
+      "name": "Stiletto Heels",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 15,
+      "description": "Classic stilettos",
+      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-heels",
+      "name": "Block Heels",
+      "price": 2800,
+      "original_price": 3500,
+      "discount": 20,
+      "stock": 20,
+      "description": "Comfortable block heels",
+      "image": "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-heels",
+      "name": "Platform Heels",
+      "price": 4200,
+      "original_price": 5200,
+      "discount": 19,
+      "stock": 12,
+      "description": "Trendy platforms",
+      "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-heels",
+      "name": "Strappy Heels",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 18,
+      "description": "Elegant strappy design",
+      "image": "https://images.unsplash.com/photo-1596703263926-eb0762ee17e4?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-flats",
+      "name": "Ballet Flats",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Elegant ballet flats",
+      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-flats",
+      "name": "Casual Loafers",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 20,
+      "description": "Comfortable loafers",
+      "image": "https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-flats",
+      "name": "Embellished Flats",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 15,
+      "description": "Decorated flats",
+      "image": "https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "women-flats",
+      "name": "Slip-On Flats",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 30,
+      "description": "Easy slip-on style",
+      "image": "https://images.unsplash.com/photo-1582897085656-c636d006a246?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-boys",
+      "name": "Boys T-Shirt",
+      "price": 800,
+      "original_price": 1200,
+      "discount": 33,
+      "stock": 40,
+      "description": "Cotton t-shirt for boys",
+      "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-boys",
+      "name": "Boys Kurta",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 25,
+      "description": "Traditional kurta",
+      "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-boys",
+      "name": "Boys Jeans",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 30,
+      "description": "Comfortable jeans",
+      "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-boys",
+      "name": "Boys Formal Set",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 15,
+      "description": "Formal wear set",
+      "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-girls",
+      "name": "Girls Frock",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 35,
+      "description": "Beautiful frock",
+      "image": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-girls",
+      "name": "Girls Party Dress",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 20,
+      "description": "Party wear dress",
+      "image": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-girls",
+      "name": "Girls Kurti",
+      "price": 1000,
+      "original_price": 1400,
+      "discount": 29,
+      "stock": 28,
+      "description": "Traditional kurti",
+      "image": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "kids-girls",
+      "name": "Girls Casual Set",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 22,
+      "description": "Casual wear set",
+      "image": "https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "perfumes",
+      "name": "Premium Perfume 100ml",
+      "price": 5500,
+      "original_price": 7000,
+      "discount": 21,
+      "stock": 20,
+      "description": "Long lasting fragrance",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "perfumes",
+      "name": "Designer Perfume",
+      "price": 8500,
+      "original_price": 10000,
+      "discount": 15,
+      "stock": 12,
+      "description": "Exclusive designer scent",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "perfumes",
+      "name": "Floral Perfume",
+      "price": 4500,
+      "original_price": 5500,
+      "discount": 18,
+      "stock": 25,
+      "description": "Fresh floral notes",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "perfumes",
+      "name": "Oud Perfume",
+      "price": 12000,
+      "original_price": 15000,
+      "discount": 20,
+      "stock": 8,
+      "description": "Rich oud fragrance",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "body-sprays",
+      "name": "Fresh Body Spray",
+      "price": 800,
+      "original_price": 1000,
+      "discount": 20,
+      "stock": 50,
+      "description": "Refreshing spray",
+      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "body-sprays",
+      "name": "Musk Body Spray",
+      "price": 1000,
+      "original_price": 1300,
+      "discount": 23,
+      "stock": 45,
+      "description": "Rich musk scent",
+      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "body-sprays",
+      "name": "Sport Body Spray",
+      "price": 900,
+      "original_price": 1200,
+      "discount": 25,
+      "stock": 40,
+      "description": "Energizing spray",
+      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "body-sprays",
+      "name": "Cool Body Spray",
+      "price": 750,
+      "original_price": 950,
+      "discount": 21,
+      "stock": 55,
+      "description": "Cooling effect",
+      "image": "https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "attars",
+      "name": "Pure Rose Attar",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 15,
+      "description": "Traditional rose attar",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "attars",
+      "name": "Oud Attar",
+      "price": 4500,
+      "original_price": 5500,
+      "discount": 18,
+      "stock": 10,
+      "description": "Premium oud attar",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "attars",
+      "name": "Musk Attar",
+      "price": 3000,
+      "original_price": 3800,
+      "discount": 21,
+      "stock": 18,
+      "description": "Classic musk fragrance",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "attars",
+      "name": "Jasmine Attar",
+      "price": 2800,
+      "original_price": 3500,
+      "discount": 20,
+      "stock": 12,
+      "description": "Sweet jasmine scent",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "face-creams",
+      "name": "Hydrating Face Cream",
+      "price": 1200,
+      "original_price": 1500,
+      "discount": 20,
+      "stock": 30,
+      "description": "Deep hydration",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "face-creams",
+      "name": "Night Repair Cream",
+      "price": 3200,
+      "original_price": 4000,
+      "discount": 20,
+      "stock": 20,
+      "description": "Overnight repair",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "face-creams",
+      "name": "Anti-Aging Cream",
+      "price": 4500,
+      "original_price": 5500,
+      "discount": 18,
+      "stock": 15,
+      "description": "Reduces wrinkles",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "face-creams",
+      "name": "Brightening Cream",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 25,
+      "description": "Skin brightening",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "serums",
+      "name": "Vitamin C Serum",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 25,
+      "description": "Brightening serum",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "serums",
+      "name": "Hyaluronic Acid Serum",
+      "price": 3000,
+      "original_price": 3800,
+      "discount": 21,
+      "stock": 20,
+      "description": "Intense hydration",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "serums",
+      "name": "Retinol Serum",
+      "price": 3500,
+      "original_price": 4500,
+      "discount": 22,
+      "stock": 15,
+      "description": "Anti-aging serum",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "serums",
+      "name": "Niacinamide Serum",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 28,
+      "description": "Pore minimizing",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "cleansers",
+      "name": "Gentle Cleanser",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 35,
+      "description": "Mild facial cleanser",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "cleansers",
+      "name": "Foaming Cleanser",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 30,
+      "description": "Deep cleansing foam",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "cleansers",
+      "name": "Micellar Water",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Makeup remover",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "cleansers",
+      "name": "Oil Cleanser",
+      "price": 2000,
+      "original_price": 2600,
+      "discount": 23,
+      "stock": 20,
+      "description": "Deep pore cleansing",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "sunscreen",
+      "name": "SPF 50 Sunscreen",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 35,
+      "description": "High protection",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "sunscreen",
+      "name": "Tinted Sunscreen",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 25,
+      "description": "With light coverage",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "sunscreen",
+      "name": "Matte Sunscreen",
+      "price": 2000,
+      "original_price": 2500,
+      "discount": 20,
+      "stock": 30,
+      "description": "Oil-free formula",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "sunscreen",
+      "name": "Water-Resistant Sunscreen",
+      "price": 2500,
+      "original_price": 3200,
+      "discount": 22,
+      "stock": 20,
+      "description": "For outdoor activities",
+      "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "lipstick",
+      "name": "Matte Liquid Lipstick",
+      "price": 850,
+      "original_price": 1100,
+      "discount": 23,
+      "stock": 40,
+      "description": "Long-lasting matte",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "lipstick",
+      "name": "Glossy Lipstick",
+      "price": 750,
+      "original_price": 950,
+      "discount": 21,
+      "stock": 45,
+      "description": "Shiny finish",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "lipstick",
+      "name": "Nude Lipstick",
+      "price": 900,
+      "original_price": 1200,
+      "discount": 25,
+      "stock": 35,
+      "description": "Natural nude shade",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "lipstick",
+      "name": "Red Lipstick",
+      "price": 800,
+      "original_price": 1000,
+      "discount": 20,
+      "stock": 50,
+      "description": "Classic red",
+      "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "foundation",
+      "name": "HD Foundation",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Flawless coverage",
+      "image": "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "foundation",
+      "name": "BB Cream",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 30,
+      "description": "Light coverage",
+      "image": "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "foundation",
+      "name": "Matte Foundation",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 20,
+      "description": "Oil-free matte",
+      "image": "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "foundation",
+      "name": "Dewy Foundation",
+      "price": 2000,
+      "original_price": 2600,
+      "discount": 23,
+      "stock": 22,
+      "description": "Glowing finish",
+      "image": "https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "eyeshadow",
+      "name": "Eyeshadow Palette 12 Colors",
+      "price": 2200,
+      "original_price": 2800,
+      "discount": 21,
+      "stock": 20,
+      "description": "12 stunning shades",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "eyeshadow",
+      "name": "Nude Palette",
+      "price": 1800,
+      "original_price": 2400,
+      "discount": 25,
+      "stock": 25,
+      "description": "Natural nude tones",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "eyeshadow",
+      "name": "Glitter Eyeshadow",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 30,
+      "description": "Sparkly finish",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "eyeshadow",
+      "name": "Smokey Eye Palette",
+      "price": 2000,
+      "original_price": 2600,
+      "discount": 23,
+      "stock": 18,
+      "description": "Perfect for smokey eyes",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "mascara",
+      "name": "Volumizing Mascara",
+      "price": 1200,
+      "original_price": 1600,
+      "discount": 25,
+      "stock": 35,
+      "description": "Adds volume to lashes",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "mascara",
+      "name": "Lengthening Mascara",
+      "price": 1100,
+      "original_price": 1500,
+      "discount": 27,
+      "stock": 40,
+      "description": "Extends lash length",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "mascara",
+      "name": "Waterproof Mascara",
+      "price": 1500,
+      "original_price": 2000,
+      "discount": 25,
+      "stock": 30,
+      "description": "Stays all day",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    },
+    {
+      "slug": "mascara",
+      "name": "Curling Mascara",
+      "price": 1300,
+      "original_price": 1700,
+      "discount": 24,
+      "stock": 28,
+      "description": "Curls lashes perfectly",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=400&h=600&fit=crop"
+    }
+  ]
+}

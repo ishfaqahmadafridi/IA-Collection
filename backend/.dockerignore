@@ -21,3 +21,8 @@ venv
 env
 .env.local
 .env.*.local
+
+*.sqlite3
+media
+.test-media
+staticfiles

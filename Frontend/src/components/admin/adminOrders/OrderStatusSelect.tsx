@@ -1,3 +1,4 @@
+import { ORDER_STATUS_LABELS } from '../../../constants/orders';
 import { useOrdersStore } from '../../../stores/admin/ordersStore';
 import type { OrderStatusSelectProps } from '../../../types/components/admin/adminOrders/adminOrdersInterface';
 import type { ChangeEvent } from 'react';
@@ -26,11 +27,7 @@ export default function OrderStatusSelect({ order }: OrderStatusSelectProps) {
         statusColors[order.status] || 'bg-gray-50 text-gray-600'
       }`}
     >
-      <option value="pending">Pending</option>
-      <option value="processing">Processing</option>
-      <option value="shipped">Shipped</option>
-      <option value="delivered">Delivered</option>
-      <option value="cancelled">Cancelled</option>
+      {(order.allowed_statuses || [order.status]).map(status => <option key={status} value={status}>{ORDER_STATUS_LABELS[status] || status}</option>)}
     </select>
   );
 }

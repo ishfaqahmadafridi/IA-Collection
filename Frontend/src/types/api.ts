@@ -12,6 +12,7 @@ export interface LoginResponse { access: string; refresh: string; user: User }
 export interface ProfileUpdate { name: string; username: string; email: string }
 export interface PasswordChange { currentPassword: string; newPassword: string }
 export interface ApiProduct {
+  stock_status?: 'in_stock' | 'low_stock' | 'out_of_stock';
   id: number;
   name: string;
   category: number;
@@ -31,7 +32,7 @@ export interface ApiCategory {
   parent: number | null;
   image: string | null;
   hero_image: string | null;
-  products: ApiProduct[];
+  products?: ApiProduct[];
 }
 export interface CheckoutItem { product: number; quantity: number; size: string }
 export interface CheckoutRequest {
@@ -40,6 +41,7 @@ export interface CheckoutRequest {
   items: CheckoutItem[];
 }
 export interface CustomerOrder {
+  allowed_statuses?: string[];
   id: number;
   order_number: string;
   total_amount: string;

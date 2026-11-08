@@ -83,7 +83,7 @@ class CustomerOrderTests(APITestCase):
     def test_missing_category_does_not_expose_other_products(self):
         response = self.client.get('/api/products/?category_slug=missing')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.data, [])
+        self.assertEqual(response.data['results'], [])
 
     def test_admin_cannot_delete_a_product_used_in_an_order(self):
         self.client.post('/api/orders/', self.payload, format='json')

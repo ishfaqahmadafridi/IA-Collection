@@ -10,3 +10,7 @@ dist/
 .env.*
 !.env.example
 *.sqlite3
+
+backend/media/
+backend/.test-media/
+backend/staticfiles/

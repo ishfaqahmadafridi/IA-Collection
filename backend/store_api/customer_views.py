@@ -2,22 +2,9 @@
 from rest_framework import generics, status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework import serializers
 from .models import Order
-from .serializers import OrderSerializer
+from .serializers import OrderSerializer, CheckoutSerializer
 from .services.checkout import create_order
-
-
-class CheckoutItemSerializer(serializers.Serializer):
-    product = serializers.IntegerField(min_value=1)
-    quantity = serializers.IntegerField(min_value=1, max_value=1000)
-    size = serializers.CharField(max_length=50, allow_blank=True, default='')
-
-
-class CheckoutSerializer(serializers.Serializer):
-    checkout_key = serializers.UUIDField()
-    shipping_address = serializers.CharField(min_length=10, max_length=2000)
-    items = CheckoutItemSerializer(many=True, allow_empty=False, max_length=100)
 
 
 class CustomerOrderCreate(generics.GenericAPIView):

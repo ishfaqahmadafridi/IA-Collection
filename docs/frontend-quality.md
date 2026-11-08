@@ -59,11 +59,11 @@ The Docker frontend builds with Node 22 and serves through nginx, proxying `/api
 to the backend. It no longer relies on runtime Vite environment injection or a
 source bind mount that hides built assets.
 
-These checks do not certify production readiness. Backend deployment settings,
-remaining dependency security updates and moving refresh credentials from browser
-storage to an HttpOnly-cookie design still need a separate production hardening
-pass. The current bounded profile-image storage retains the legacy database
-format; migration to file/object storage is not included.
+Production deployment still requires real environment credentials, HTTPS and a
+storage/database operating plan. Backend settings, constraints, rate limiting and
+file-backed profile uploads are covered in `docs/backend-quality.md`. Refresh
+credentials remain in browser storage; an HttpOnly-cookie redesign and remaining
+dependency security upgrades are separate work.
 
 ## Source organization
 
