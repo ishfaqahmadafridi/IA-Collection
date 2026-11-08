@@ -6,5 +6,5 @@ export function stockStatus(stock: number) {
   return 'in_stock';
 }
 export function filterInventory(products: Product[], filter: string): Product[] {
-  return products.filter(product => product && (filter === 'all' || stockStatus(product.stock) === filter));
+  return products.filter(product => product && (filter === 'all' || (product.stock_status || stockStatus(product.stock)) === filter));
 }

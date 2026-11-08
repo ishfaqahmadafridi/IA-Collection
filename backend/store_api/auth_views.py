@@ -1,130 +1,64 @@
 from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny, IsAuthenticated
-from rest_framework.decorators import api_view, permission_classes
+from rest_framework.decorators import api_view, permission_classes, throttle_classes
 from django.contrib.auth.models import User
-from django.contrib.auth.hashers import check_password
-from .serializers import UserSerializer, ProfileUpdateSerializer
-from django.contrib.auth.password_validation import validate_password
-from django.core.exceptions import ValidationError
-from rest_framework import serializers
-import base64
-import binascii
-import io
-from PIL import Image, UnidentifiedImageError
-from .models import UserProfile
-from rest_framework_simplejwt.views import TokenObtainPairView
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
+from .serializers import UserSerializer, ProfileUpdateSerializer, PasswordChangeSerializer, ProfileImageSerializer
+from .services.accounts import profile_data, change_user_password, save_profile_image
+from .throttles import AuthenticationThrottle
+from .services.activity import record_activity
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
         data = super().validate(attrs)
-        # Get or create profile
-        profile, _ = UserProfile.objects.get_or_create(user=self.user)
-        data['user'] = {
-            'id': self.user.id,
-            'username': self.user.username,
-            'email': self.user.email,
-            'is_staff': self.user.is_staff,
-            'profile_image': profile.profile_image or '',
-        }
+        data['user'] = profile_data(self.user, self.context['request'])
+        record_activity(self.context['request'], 'login', user=self.user)
         return data
 
-
 class RegisterView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    permission_classes = (AllowAny,)
+    permission_classes = [AllowAny]
+    throttle_classes = [AuthenticationThrottle]
     serializer_class = UserSerializer
 
-
 class CustomTokenObtainPairView(TokenObtainPairView):
-    permission_classes = (AllowAny,)
+    permission_classes = [AllowAny]
+    throttle_classes = [AuthenticationThrottle]
     serializer_class = CustomTokenObtainPairSerializer
 
+class CustomTokenRefreshView(TokenRefreshView):
+    permission_classes = [AllowAny]
+    throttle_classes = [AuthenticationThrottle]
 
 @api_view(['POST', 'DELETE'])
 @permission_classes([IsAuthenticated])
 def upload_profile_image(request):
-    profile, _ = UserProfile.objects.get_or_create(user=request.user)
     if request.method == 'DELETE':
-        profile.profile_image = ''
-        profile.save(update_fields=['profile_image'])
+        save_profile_image(request.user)
         return Response(status=status.HTTP_204_NO_CONTENT)
-    image_data = request.data.get('profile_image', '')
-    if not isinstance(image_data, str) or len(image_data) > 2800000:
-        return Response({'profile_image': ['Image must be smaller than 2 MB.']}, status=400)
-    try:
-        header, encoded = image_data.split(',', 1)
-        allowed = {'data:image/png;base64': 'PNG', 'data:image/jpeg;base64': 'JPEG', 'data:image/webp;base64': 'WEBP'}
-        if header not in allowed:
-            raise ValueError
-        raw = base64.b64decode(encoded, validate=True)
-        if len(raw) > 2 * 1024 * 1024:
-            raise ValueError
-        with Image.open(io.BytesIO(raw)) as image:
-            if image.format != allowed[header] or image.width * image.height > 16000000:
-                raise ValueError
-            image.verify()
-    except (ValueError, binascii.Error, UnidentifiedImageError, OSError, Image.DecompressionBombError):
-        return Response({'profile_image': ['Provide a valid JPEG, PNG or WebP image smaller than 2 MB.']}, status=400)
-    profile.profile_image = image_data
-    profile.save(update_fields=['profile_image'])
-    return Response({'image_url': image_data})
-
+    serializer = ProfileImageSerializer(data=request.data)
+    serializer.is_valid(raise_exception=True)
+    profile = save_profile_image(request.user, serializer.validated_data['profile_image'])
+    return Response({'image_url': request.build_absolute_uri(profile.image.url)})
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
+@throttle_classes([AuthenticationThrottle])
 def change_password(request):
-    """Change user password"""
-    class PasswordSerializer(serializers.Serializer):
-        currentPassword = serializers.CharField()
-        newPassword = serializers.CharField()
-    serializer = PasswordSerializer(data=request.data)
+    serializer = PasswordChangeSerializer(data=request.data)
     serializer.is_valid(raise_exception=True)
-    current_password = serializer.validated_data['currentPassword']
-    new_password = serializer.validated_data['newPassword']
-    
-    if not current_password or not new_password:
-        return Response({'error': 'Current and new password are required'}, status=status.HTTP_400_BAD_REQUEST)
-    
-    if not check_password(current_password, request.user.password):
-        return Response({'error': 'Current password is incorrect'}, status=status.HTTP_400_BAD_REQUEST)
-    
-    try:
-        validate_password(new_password, user=request.user)
-    except ValidationError as error:
-        return Response({'newPassword': error.messages}, status=400)
-    request.user.set_password(new_password)
-    request.user.save()
-    
+    change_user_password(request.user, serializer.validated_data['currentPassword'], serializer.validated_data['newPassword'])
     return Response({'message': 'Password changed successfully'})
-
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def get_profile(request):
-    """Get user profile"""
-    profile, _ = UserProfile.objects.get_or_create(user=request.user)
-    return Response({
-        'id': request.user.id,
-        'username': request.user.username,
-        'email': request.user.email,
-        'name': request.user.first_name or request.user.username,
-        'is_staff': request.user.is_staff,
-        'profile_image': profile.profile_image or '',
-    })
-
+    return Response(profile_data(request.user, request))
 
 @api_view(['PUT'])
 @permission_classes([IsAuthenticated])
 def update_profile(request):
     serializer = ProfileUpdateSerializer(request.user, data=request.data)
     serializer.is_valid(raise_exception=True)
-    user = serializer.save()
-    profile, _ = UserProfile.objects.get_or_create(user=user)
-    return Response({
-        'id': user.id, 'username': user.username, 'name': user.first_name,
-        'email': user.email, 'is_staff': user.is_staff,
-        'profile_image': profile.profile_image or '',
-    })
+    return Response(profile_data(serializer.save(), request))

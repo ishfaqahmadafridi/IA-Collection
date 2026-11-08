@@ -4,6 +4,7 @@ from django.db import transaction, IntegrityError
 from django.db.models import F
 from rest_framework.exceptions import ValidationError
 from ..models import Order, OrderItem, Product
+from ..constants import MAX_ORDER_AMOUNT
 
 
 def _existing_order(user, number, shipping_address, items):
@@ -44,7 +45,7 @@ def create_order(user, checkout_key, shipping_address, items):
                 if not updated:
                     raise ValidationError({'items': f'Insufficient stock for {product.name}.'})
                 total += product.price * quantity
-            if total > Decimal('99999999.99'):
+            if total > MAX_ORDER_AMOUNT:
                 raise ValidationError({'items': 'The order total exceeds the supported amount.'})
             OrderItem.objects.bulk_create([OrderItem(order=order, product=products[item['product']], quantity=item['quantity'], price=products[item['product']].price, size=item['size']) for item in items])
             order.total_amount = total

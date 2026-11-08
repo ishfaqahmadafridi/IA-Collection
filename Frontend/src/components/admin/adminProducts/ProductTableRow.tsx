@@ -28,7 +28,7 @@ export default function ProductTableRow({ product, onEdit }: ProductTableRowProp
       </td>
       <td className="py-3 px-4 text-sm font-medium text-gray-900">{product.stock}</td>
       <td className="py-3 px-4">
-        <ProductStockBadge stock={product.stock} />
+        <ProductStockBadge status={product.stock_status} stock={product.stock} />
       </td>
       <td className="py-3 px-4">
         <ProductActions product={product} onEdit={onEdit} />

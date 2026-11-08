@@ -1,3 +1,4 @@
+import { getAllPages } from './listing';
 import api from '../api/client';
 import type { CustomerOrder, ApiProduct } from '../types/api';
 import type { Product, InventoryStatus } from '../types/components/admin/adminProducts/adminProductsInterface';
@@ -12,16 +13,16 @@ const product = (value: ApiProduct): Product => ({ ...value, price: Number(value
 type ApiOrder = CustomerOrder & { user_name: string; notes?: string };
 const order = (value: ApiOrder): Order => ({ ...value, total_amount: Number(value.total_amount), items: value.items.map(item => ({ ...item, price: Number(item.price), total_price: Number(item.price) * item.quantity })) });
 export const adminService = {
-  products: async () => (await api.get<ApiProduct[]>('/admin/products/')).map(product),
+  products: async () => (await getAllPages<ApiProduct>('/admin/products/')).map(product),
   createProduct: async (data: ProductWrite) => product(await api.post<ApiProduct>('/admin/products/', data)),
   updateProduct: async (id: string, data: ProductWrite) => product(await api.patch<ApiProduct>(`/admin/products/${id}/`, data)),
   deleteProduct: (id: string) => api.delete<void>(`/admin/products/${id}/`),
   stock: async (id: string, stock: number) => product(await api.post<ApiProduct>(`/admin/products/${id}/update_stock/`, { stock })),
   inventory: () => api.get<InventoryStatus>('/admin/products/inventory_status/'),
-  lowStock: async () => (await api.get<ApiProduct[]>('/admin/products/low_stock_products/')).map(product),
-  outOfStock: async () => (await api.get<ApiProduct[]>('/admin/products/out_of_stock_products/')).map(product),
-  orders: async () => (await api.get<ApiOrder[]>('/admin/orders/')).map(order),
-  recentOrders: async (days = 7) => (await api.get<ApiOrder[]>('/admin/orders/recent_orders/', { params: { days } })).map(order),
+  lowStock: async () => (await getAllPages<ApiProduct>('/admin/products/low_stock_products/')).map(product),
+  outOfStock: async () => (await getAllPages<ApiProduct>('/admin/products/out_of_stock_products/')).map(product),
+  orders: async () => (await getAllPages<ApiOrder>('/admin/orders/')).map(order),
+  recentOrders: async (days = 7) => (await getAllPages<ApiOrder>('/admin/orders/recent_orders/', { params: { days } })).map(order),
   updateOrder: async (id: number, status: string) => order((await api.post<{ order: ApiOrder }>(`/admin/orders/${id}/update_status/`, { status })).order),
   dashboard: () => api.get<DashboardStats>('/admin/dashboard/stats/'),
   sales: async (period: string): Promise<SalesAnalytics> => {

@@ -3,9 +3,8 @@ from rest_framework.routers import DefaultRouter
 from .views import CategoryViewSet, ProductViewSet
 from .auth_views import (
     RegisterView, CustomTokenObtainPairView,
-    upload_profile_image, change_password, get_profile, update_profile
+    upload_profile_image, change_password, get_profile, update_profile, CustomTokenRefreshView
 )
-from rest_framework_simplejwt.views import TokenRefreshView
 
 # Import from organized admin_views package
 from .admin_views import (
@@ -27,7 +26,7 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register/', RegisterView.as_view(), name='auth_register'),
     path('login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('login/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),
     
     # Profile endpoints
     path('orders/', CustomerOrderCreate.as_view(), name='customer-order-create'),

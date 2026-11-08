@@ -7,7 +7,7 @@ export interface Product {
     original_price?: number;
     discount?: number;
     stock: number;
-    stock_status?: string;
+    stock_status?: 'in_stock' | 'low_stock' | 'out_of_stock';
     is_in_stock?: boolean;
     description?: string;
     is_hot?: boolean;
@@ -56,6 +56,7 @@ export interface ProductImageProps {
 }
 
 export interface ProductStockBadgeProps {
+    status?: 'in_stock' | 'low_stock' | 'out_of_stock';
     stock: number;
 }
 
