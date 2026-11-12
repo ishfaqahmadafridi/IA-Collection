@@ -5,12 +5,19 @@ from .constants import ORDER_STATUS_CHOICES
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 class Category(models.Model):
+    class TryOnKind(models.TextChoices):
+        NONE = '', 'Not supported'
+        TOP = 'top', 'Top'
+        BOTTOM = 'bottom', 'Bottom'
+
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
     parent = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='subcategories')
     image = models.ImageField(upload_to='categories/', null=True, blank=True)
     hero_image = models.ImageField(upload_to='heroes/', null=True, blank=True)
     description = models.TextField(blank=True)
+    # Which body region the camera try-on targets for products in this category.
+    try_on_kind = models.CharField(max_length=10, choices=TryOnKind.choices, blank=True, default=TryOnKind.NONE)
 
     def __str__(self):
         if self.parent:

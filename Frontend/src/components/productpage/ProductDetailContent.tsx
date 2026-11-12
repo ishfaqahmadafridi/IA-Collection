@@ -1,3 +1,4 @@
+import TryOnButton from '../tryon/TryOnButton';
 import ProductPurchaseForm from './ProductPurchaseForm';
 import type { ProductDetailContentProps } from '../../types/product';
 export default function ProductDetailContent({ product, ...purchase }: ProductDetailContentProps) {
@@ -8,6 +9,7 @@ export default function ProductDetailContent({ product, ...purchase }: ProductDe
       <p>PKR {Number(product.price).toLocaleString()}</p>
       <p>{product.description}</p>
       <p>{product.stock > 0 ? `${product.stock} in stock` : 'Out of stock'}</p>
+      <TryOnButton product={product} />
       <ProductPurchaseForm stock={product.stock} {...purchase} />
     </div>
   </div>;

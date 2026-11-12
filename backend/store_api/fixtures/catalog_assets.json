@@ -8,7 +8,8 @@
     {
       "slug": "men-shirts",
       "name": "Shirts",
-      "parent": "men"
+      "parent": "men",
+      "try_on_kind": "top"
     },
     {
       "slug": "men-peshawari",
@@ -33,22 +34,26 @@
     {
       "slug": "men-kurta",
       "name": "Kurta",
-      "parent": "men"
+      "parent": "men",
+      "try_on_kind": "top"
     },
     {
       "slug": "men-shalwar",
       "name": "Shalwar Kameez",
-      "parent": "men"
+      "parent": "men",
+      "try_on_kind": "top"
     },
     {
       "slug": "men-sherwani",
       "name": "Sherwani",
-      "parent": "men"
+      "parent": "men",
+      "try_on_kind": "top"
     },
     {
       "slug": "men-coat",
       "name": "Coat",
-      "parent": "men"
+      "parent": "men",
+      "try_on_kind": "top"
     },
     {
       "slug": "men-glasses",
@@ -68,7 +73,8 @@
     {
       "slug": "women-kurti",
       "name": "Kurti",
-      "parent": "women"
+      "parent": "women",
+      "try_on_kind": "top"
     },
     {
       "slug": "women-heels",
@@ -93,7 +99,8 @@
     {
       "slug": "women-pants",
       "name": "Pants",
-      "parent": "women"
+      "parent": "women",
+      "try_on_kind": "bottom"
     },
     {
       "slug": "women-dresses",

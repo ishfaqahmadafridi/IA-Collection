@@ -12,6 +12,8 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@decartai/sdk": "0.2.14",
+    "@mediapipe/tasks-vision": "1.2.2",
     "axios": "^1.13.6",
     "immer": "^11.1.4",
     "prop-types": "^15.8.1",
