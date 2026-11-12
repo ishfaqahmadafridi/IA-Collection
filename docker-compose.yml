@@ -18,6 +18,10 @@ services:
       CSRF_TRUSTED_ORIGINS: ${CSRF_TRUSTED_ORIGINS:-}
       DATABASE_URL: ${DATABASE_URL:-sqlite:////app/data/db.sqlite3}
       MEDIA_ROOT: /app/media
+      DECART_API_KEY: ${DECART_API_KEY:-}
+      DECART_ALLOWED_ORIGINS: ${DECART_ALLOWED_ORIGINS:-}
+      DECART_MAX_SESSION_SECONDS: ${DECART_MAX_SESSION_SECONDS:-120}
+      LIVE_TRYON_RATE: ${LIVE_TRYON_RATE:-3/hour}
       CACHE_BACKEND: django.core.cache.backends.db.DatabaseCache
       CACHE_LOCATION: api_rate_limits
       TRUSTED_PROXY_COUNT: ${TRUSTED_PROXY_COUNT:-1}

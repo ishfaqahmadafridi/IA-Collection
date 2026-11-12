@@ -17,6 +17,7 @@ class ProductSerializer(serializers.ModelSerializer):
     stock_status = serializers.ReadOnlyField()
     is_in_stock = serializers.ReadOnlyField()
     category_name = serializers.CharField(source='category.name', read_only=True)
+    try_on_kind = serializers.CharField(source='category.try_on_kind', read_only=True)
 
     class Meta:
         model = Product

@@ -125,3 +125,11 @@ for _name, _value in {'API_PAGE_SIZE': REST_FRAMEWORK['PAGE_SIZE'], 'API_MAX_PAG
     'LOW_STOCK_THRESHOLD': LOW_STOCK_THRESHOLD, 'ACTIVITY_METADATA_MAX_BYTES': ACTIVITY_METADATA_MAX_BYTES}.items():
     if _value <= 0:
         raise ImproperlyConfigured(f'{_name} must be positive.')
+
+# Optional external live-video try-on. Permanent credentials remain server-side.
+DECART_API_KEY = env('DECART_API_KEY', '')
+DECART_ALLOWED_ORIGINS = env('DECART_ALLOWED_ORIGINS', [], cast=list)
+DECART_MAX_SESSION_SECONDS = env('DECART_MAX_SESSION_SECONDS', 120, cast=int)
+REST_FRAMEWORK['DEFAULT_THROTTLE_RATES']['live_tryon'] = env('LIVE_TRYON_RATE', '3/hour')
+if not 10 <= DECART_MAX_SESSION_SECONDS <= 300:
+    raise ImproperlyConfigured('DECART_MAX_SESSION_SECONDS must be between 10 and 300.')

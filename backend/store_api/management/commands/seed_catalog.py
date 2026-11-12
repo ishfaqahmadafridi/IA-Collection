@@ -20,7 +20,7 @@ class Command(BaseCommand):
         payload = json.loads((Path(__file__).resolve().parents[2] / 'fixtures' / filename).read_text())
         for row in payload['categories']:
             parent = Category.objects.get(slug=row['parent']) if row['parent'] else None
-            Category.objects.get_or_create(slug=row['slug'], defaults={'name': row['name'], 'parent': parent})
+            Category.objects.get_or_create(slug=row['slug'], defaults={'name': row['name'], 'parent': parent, 'try_on_kind': row.get('try_on_kind', '')})
         created = 0
         for row in payload['products']:
             category = Category.objects.get(slug=row['slug'])

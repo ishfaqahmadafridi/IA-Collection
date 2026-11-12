@@ -1,3 +1,4 @@
+import type { GarmentKind } from './tryon';
 export interface User {
   id: number;
   username: string;
@@ -17,6 +18,8 @@ export interface ApiProduct {
   name: string;
   category: number;
   category_name: string;
+  /** Camera try-on region from the product's category; empty when unsupported. */
+  try_on_kind?: GarmentKind | '';
   price: string | number;
   original_price: string | number | null;
   discount: number;

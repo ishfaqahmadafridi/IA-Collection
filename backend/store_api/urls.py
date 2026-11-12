@@ -13,6 +13,7 @@ from .admin_views import (
     top_selling_products, log_user_activity, subscribe_newsletter
 )
 
+from .live_tryon_views import LiveTryOnConfig, LiveTryOnToken
 from .customer_views import CustomerOrderCreate, CustomerOrderDetail
 
 # Single router for all viewsets
@@ -23,6 +24,8 @@ router.register(r'admin/products', AdminProductViewSet, basename='admin-products
 router.register(r'admin/orders', AdminOrderViewSet, basename='admin-orders')
 
 urlpatterns = [
+    path('live-try-on/config/', LiveTryOnConfig.as_view(), name='live-tryon-config'),
+    path('live-try-on/token/', LiveTryOnToken.as_view(), name='live-tryon-token'),
     path('', include(router.urls)),
     path('register/', RegisterView.as_view(), name='auth_register'),
     path('login/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),

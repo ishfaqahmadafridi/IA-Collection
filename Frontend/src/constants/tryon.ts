@@ -1,0 +1,42 @@
+export const TRY_ON = {
+  frameInterval: 150,
+  clothingCategory: 4,
+  clothingModel: `${import.meta.env.BASE_URL}vision/selfie_multiclass_256x256.tflite`,
+  smoothingTime: 120,
+  smoothingResetGap: 500,
+  smoothingResetDistanceRatio: 0.75,
+  confidence: 0.5,
+  startupTimeout: 60000,
+  trackingTimeout: 10000,
+  minShoulderPixels: 30,
+  collarOffsetRatio: 0.12,
+  imageSize: 640,
+  backgroundTolerance: 16,
+  // Soft inward fade (px) hides the blocky edge of the 256px segmentation mask.
+  edgeFeather: 2,
+  // Overlap (px) between mesh triangles; hides canvas anti-aliasing seams.
+  seamOverlap: 0.75,
+  shoulderWidthRatio: 1.9,
+  hipWidthRatio: 1.8,
+  bottomHeightRatio: 1.05,
+  estimatedLegHeightRatio: 2.8,
+  torsoHeightRatio: 1.35,
+  estimatedHeightRatio: 1.8,
+  manualWidthRatio: 0.7,
+  manualShoulderY: 0.3,
+  // Pants start slightly above the hip joints, at the waistband.
+  waistbandOffsetRatio: 0.08,
+  manualHipY: 0.35,
+  manualBottomWidthRatio: 0.45,
+  manualBottomHeightRatio: 0.6,
+  model: `${import.meta.env.BASE_URL}vision/pose_landmarker_lite.task`,
+} as const;
+export const GARMENT_MESH = {
+  columns: 8, rows: 12,
+  torsoLeft: 0.24, torsoRight: 0.76, shoulderBlendExtra: 0.08,
+  legStart: 0.22,
+  topLeft: [{ x: 0.22, y: 0.15 }, { x: 0.14, y: 0.52 }, { x: 0.08, y: 0.94 }],
+  topRight: [{ x: 0.78, y: 0.15 }, { x: 0.86, y: 0.52 }, { x: 0.92, y: 0.94 }],
+  bottomLeft: [{ x: 0.3, y: 0.08 }, { x: 0.28, y: 0.53 }, { x: 0.26, y: 0.97 }],
+  bottomRight: [{ x: 0.7, y: 0.08 }, { x: 0.72, y: 0.53 }, { x: 0.74, y: 0.97 }],
+} as const;
